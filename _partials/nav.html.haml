@@ -13,27 +13,36 @@
 						%a(href="#{site.base_url}/learn.html") Learn
 					%li{:class=>"#{'active' if page.output_path.start_with?('/getstarted') }" }<
 						%a(href="#{site.base_url}/getstarted.html") Get Started
-					%li.dropdown
-						%a.dropdown-toggle(href="#" data-toggle="dropdown")<
-							= precede 'Community ' do
-								%b.caret>
-						%ul.dropdown-menu
-							%li<
-								%a(href="#") Wiki
-							%li<
-								%a(href="#") User Forum
-							%li<
-								%a(href="#") Mailing Lists
-							%li<
-								%a(href="#") Chat
-							%li<
-								%a(href="#") Blog
 					%li{:class=>"#{'active' if page.output_path.start_with?('/forums') }" }<
 						%a(href="#{site.base_url}/forums.html") Forums
 					%li{:class=>"#{'active' if page.output_path.start_with?('/getinvolved') }" }<
 						%a(href="#{site.base_url}/getinvolved.html") Get Involved
-					%li{:class=>"#{'active' if page.output_path.start_with?('/download') }" }<
-						%a(href="#{site.base_url}/download.html") Download
+					%li.dropdown
+						%a.dropdown-toggle(href="#" data-toggle="dropdown")<
+							= precede 'Download ' do
+								%b.caret>
+						%ul.dropdown-menu
+							%li<
+								%a(href="#{site.base_url}/maven.html") Maven
+							%li<
+								%a(href="#{site.base_url}/cache-store-implementations.html") Cache Store Implementations
+							%li<
+								%a(href="#{site.base_url}/hotrod-clients.html") Hot Rod Clients
+					/ %li.dropdown
+					/ 	%a.dropdown-toggle(href="#" data-toggle="dropdown")<
+					/ 		= precede 'Community ' do
+					/ 			%b.caret>
+					/ 	%ul.dropdown-menu
+					/ 		%li<
+					/ 			%a(href="#") Wiki
+					/ 		%li<
+					/ 			%a(href="#") User Forum
+					/ 		%li<
+					/ 			%a(href="#") Mailing Lists
+					/ 		%li<
+					/ 			%a(href="#") Chat
+					/ 		%li<
+					/ 			%a(href="#") Blog
 					%li.dropdown
 						%a.dropdown-toggle(href="#" data-toggle="dropdown")<
 							= precede 'Follow Us ' do
