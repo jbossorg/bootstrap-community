@@ -4,31 +4,96 @@ title: Example Homepage
 ---
 
 / Main hero unit for a primary marketing message or call to action
-.hero-unit
-  %h1 Project XYZ is Awesome!
-  %p This is the basic template for the JBoss Community Bootstrap/Awestruct project sites. This is where you would put a marketing message.
-  %p<
-    %a.btn.btn-primary.btn-large(href="swatch.html") View the Swatches &raquo;
+.row-fluid
+  #myCarousel.carousel.slide
+    / Carousel items
+    .carousel-inner
+      .item.learning
+        .row-fluid
+          .span12
+            .hero-unit
+              .row-fluid
+                .span3.pull-center.well
+                  %h3 Follow a Maker
+                  %p See a maker you like? Follow them to show your interest and to get first dibs when they create an event.
+                .span3.pull-center.well
+                  %h3 Sign up or Apply
+                  %p Sign up for a workshop or apply for an apprenticeship and get started learning today - it’s super easy!
+                .span3.pull-center.well
+                  %h3 Meet up to Learn
+                  %p Get a taste of what its like to be a cobbler, a baker, a candlestick maker by working with the Maker in her workspace.
+                .span3.pull-center.well
+                  %h3 Show off yr Skilz
+                  %p We track the skills and tools you’re learning in every workshop & apprenticeship - eventually leading to a fab portfolio!
 
-/ Example row of columns
-.row
-  .span4
-    %h2 Uses Bootstrap
-    :markdown
-      This theme is designed to layer on top of Bootstrap by using the standardized CSS classes and IDs so you can easily take advantage of all the great built in components of Bootstrap.
-    %p<
-      %a.btn(href="http://twitter.github.io/bootstrap/components.html") Bootstrap Components &raquo;
-  .span4
-    %h2 Look and Feel Swatches
-    :markdown
-      To give a better view of some of the look and feel changes, we've put together a swatch file containing various styled components and the Font Awesome icon replacement for quick viewing.
-    %p<
-      %a.btn(href="swatch.html") Go to the Swatches &raquo;
-  .span4
-    %h2 The JBoss Badge
-    :markdown
-      Projects are now able to utilize this standard look and feel or create their own. We just ask that you keep unedited this badge on your home page to show that your project is a part of the JBoss Family.
-    %p<
-    .jbossbadge
-      %a(href="http://www.jboss.org/")<
-        %img(src="#{site.jborg_images_url}/common/jbossbadge.png")
+      .item.overview.active
+        .row-fluid
+          .span12
+            .hero-unit
+              %h1 Infinispan
+              %p This is the basic template for the JBoss Community Bootstrap/Awestruct project sites. This is where you would put a marketing message.
+              %p<
+                %a.btn.btn-primary.btn-large(href="swatch.html") View the Swatches &raquo;
+
+      .item.leading
+        .row-fluid
+          .span12
+            .hero-unit
+              .row-fluid
+                .span4.pull-center.well
+                  %h3 Post an Idea
+                  %p Want to test out an idea by seeing who's interested? Post an idea, leave the dates "TBA", & we'll notify you as people follow it.
+                .span4.pull-center.well
+                  %h3 Set a Date
+                  %p Set a date when you're ready. We'll notify your followers and give them first dibs on signups. Then we'll notify the rest of the Guild.
+                .span4.pull-center.well
+                  %h3 Work Together
+                  %p When the date comes, we'll notify your participants and apprentices to remind them of details, and give them credit for their work.
+
+    / Carousel nav
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"} ‹
+    %a.left.carousel-control.extra{"data-slide" => "prev", :href => "#myCarousel"}
+    %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"} ›
+    %a.right.carousel-control.extra{"data-slide" => "next", :href => "#myCarousel"}
+
+
+/ section containing blog posts
+#equalHeightsB.row-fluid.equalHero
+  .span6
+    %h3 News
+    %ul.listPosts
+      %li
+        .avatar
+        %span.name Martha Smith
+        %span.meta March 10, 2012
+        %a{:href => "blog-single.html"} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere pellentesque arcu, eu volutpat neque adipiscing quis. Aliquam tempor gravida sapien id egestas.
+      %li
+        .avatar
+        %span.name Ella Fitzgerald
+        %span.meta July 10, 2012
+        %a{:href => "blog-single.html"} Vestibulum sed rhoncus nulla. Ut magna massa, cursus at mattis in, hendrerit nec ipsum. Aliquam quis lectus velit. Nam lacinia ut diam sed mollis.
+      %li
+        .avatar
+        %span.name Wendy Davis
+        %span.meta January 10, 2012
+        %a{:href => "blog-single.html"} Aliquam posuere ac dolor ultricies hendrerit. Nunc varius ac magna ut tristique. Proin id erat sed risus sollicitudin laoreet. Donec sagittis lacinia lorem, sed aliquam quam tempus id.
+
+  .span6
+    %h3 Forums
+    %ul.listPosts
+      %li
+        .avatar
+        %span.name Anias Nin
+        %span.meta February 10, 2012
+        %a{:href => "blog-single.html"} Pellentesque mattis molestie hendrerit. Praesent ullamcorper euismod dolor eget mattis. Aenean gravida eros et augue suscipit, id vehicula metus ullamcorper.
+      %li
+        .avatar
+        %span.name Gretta Garbo
+        %span.meta September 10, 2012
+        %a{:href => "blog-single.html"}  Nullam sit amet mollis elit, a scelerisque nisl. Phasellus vehicula magna sed nulla interdum, a pellentesque eros pulvinar. Nulla imperdiet enim sed aliquet lacinia.
+      %li
+        .avatar
+        %span.name Christine Wig
+        %span.meta December 10, 2012
+        %a{:href => "blog-single.html"}  Nullam nec dolor hendrerit, vehicula libero vel, laoreet erat. Ut sed ipsum faucibus, dignissim neque nec, cursus quam.
+
