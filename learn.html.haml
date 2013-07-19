@@ -4,34 +4,73 @@ title: Learn
 ---
 
 .row-fluid
-  %h1 Learn about Infnispan
+  .hero-unit
+    %h1 Learn about Infnispan
+    %p Transactional in-memory key/value NoSQL datastore & Data Grid
 
-  %h2 Transactional in-memory key/value NoSQL datastore & Data Grid
-
-  %p Infinispan is an extremely scalable, highly available key/value NoSQL datastore and distributed data grid platform - 100% open source, and written in Java. The purpose of Infinispan is to expose a data structure that is highly concurrent, designed ground-up to make the most of modern multi-processor/multi-core architectures while at the same time providing distributed cache capabilities.
-  %p At its core Infinispan exposes a Cache interface which extends java.util.Map. It is also optionally is backed by a peer-to-peer network architecture to distribute state efficiently around a data grid.
-  %p Offering high availability via making replicas of state across a network as well as optionally persisting state to configurable cache stores, Infinispan offers enterprise features such as efficient eviction algorithms to control memory usage as well as JTA compatibility.
-  %p In addition to the peer-to-peer architecture of Infinispan, a client/server mode is also supported. This provides the ability to run farms of Infinispan instances as servers and connecting to them using a plethora of clients - both written in Java as well as other popular open source and proprietary platforms.
+  %h2
+  .row-fluid#equalHeightsB
+    .well.span6
+      %p Infinispan is an extremely scalable, highly available key/value NoSQL datastore and distributed data grid platform - 100% open source, and written in Java. The purpose of Infinispan is to expose a data structure that is highly concurrent, designed ground-up to make the most of modern multi-processor/multi-core architectures while at the same time providing distributed cache capabilities.
+    .well.span6
+      %p At its core Infinispan exposes a Cache interface which extends java.util.Map. It is also optionally is backed by a peer-to-peer network architecture to distribute state efficiently around a data grid.
+  .row-fluid#equalHeightsB
+    .well.span6
+      %p Offering high availability via making replicas of state across a network as well as optionally persisting state to configurable cache stores, Infinispan offers enterprise features such as efficient eviction algorithms to control memory usage as well as JTA compatibility.
+    .well.span6
+      %p In addition to the peer-to-peer architecture of Infinispan, a client/server mode is also supported. This provides the ability to run farms of Infinispan instances as servers and connecting to them using a plethora of clients - both written in Java as well as other popular open source and proprietary platforms.
 
   %h2 Why is Infinispan sexy?
-  %p
-    %b State-of-the-art core
-    Infinispan's core is a specialised data structure, tuned to and geared for a great degree of concurrency - especially on multi-CPU/multi-core architectures. Most of the internals are essentially lock- and synchronization-free, favouring state-of-the-art non-blocking algorithms and techniques wherever possible. Even though non-clustered caching (LOCAL mode) is not its primary goal, Infinispan still is very competitive, as demonstrated in these benchmarks.
-  %p
-    %b Massive heap
-    If you have 100 blade servers, and each node has 2GB of space to dedicate to a replicated cache, you end up with 2 GB of total data. Every server is just a copy. On the other hand, with a distributed grid - assuming you want 1 copy per data item - you get a 100 GB memory backed virtual heap that is efficiently accessible from anywhere in the grid. Session affinity is not required, so you don't need fancy load balancing policies. Of course you can still use them for further optimisation. If a server fails, the grid simply creates new copies of the lost data, and puts them on other servers. This means that applications looking for ultimate performance are no longer forced to delegate the majority of their data lookups to a large single database server - that massive bottleneck that exists in over 80% of enterprise applications!
-  %p
-    %b Extreme scalability
-    Since data is evenly distributed, there is essentially no major limit to the size of the grid, except group communication on the network - which is minimised to just discovery of new nodes. All data access patterns use peer-to-peer communication where nodes directly speak to each other, which scales very well.
-  %p
-    %b Not Just for Java (PHP, Python, Ruby, C, etc.)
-    Infinispan ships with a language-independent server module. This supports the popular memcached protocol - with existing clients for almost every popular programming language - as well as an optimised Infinispan-specific protocol, called Hot Rod. And finally, Infinispan also has a ReST API. This means that Infinispan is not just useful to Java or JVM-based applications. Any major website or application that wants to take advantage of a fast data grid will be able to do so.
-  %p
-    %b Support for Compute Grids
-    Also on the roadmap is the ability to pass a Runnable around the grid. You will be able to push complex processing towards the server where data is local, and pull back results using a Future. This map/reduce style paradigm is common in applications where a large amount of data is needed to compute relatively small results.
-  %p
-    %b Management is key!
-    When you start thinking about running a grid on several hundred servers, management is no longer an extra, it becomes a necessity. This is on Infinispan's roadmap. We aim to provide rich tooling in this area, with many integration opportunities.
+
+  .row-fluid
+    .span6
+      .row-fluid
+        .span1.pull-center
+          %i.enormous-icon.icon-magic.circled.pull-center.icon-2x
+        .span11
+          %h3 State-of-the-art core
+          %p
+            Infinispan's core is a specialised data structure, tuned to and geared for a great degree of concurrency - especially on multi-CPU/multi-core architectures. Most of the internals are essentially lock- and synchronization-free, favouring state-of-the-art non-blocking algorithms and techniques wherever possible. Even though non-clustered caching (LOCAL mode) is not its primary goal, Infinispan still is very competitive, as demonstrated in these benchmarks.
+      .row-fluid
+        .span1.pull-center
+          %i.enormous-icon.icon-coffee.circled.pull-center.icon-2x
+        .span11
+          %h3 Not Just for Java (PHP, Python, Ruby, C, etc.)
+          %p
+            Infinispan ships with a language-independent server module. This supports the popular memcached protocol - with existing clients for almost every popular programming language - as well as an optimised Infinispan-specific protocol, called Hot Rod. And finally, Infinispan also has a ReST API. This means that Infinispan is not just useful to Java or JVM-based applications. Any major website or application that wants to take advantage of a fast data grid will be able to do so.
+      .row-fluid
+        .span1.pull-center
+          %i.enormous-icon.icon-superscript.circled.pull-center.icon-2x
+        .span11
+          %h3 Extreme scalability
+          %p
+            Since data is evenly distributed, there is essentially no major limit to the size of the grid, except group communication on the network - which is minimised to just discovery of new nodes. All data access patterns use peer-to-peer communication where nodes directly speak to each other, which scales very well.
+
+    .span6
+      .row-fluid
+        .span1.pull-center
+          %i.enormous-icon.icon-wrench.circled.pull-center.icon-2x
+        .span11
+          %h3 Management is key!
+          %p
+            When you start thinking about running a grid on several hundred servers, management is no longer an extra, it becomes a necessity. This is on Infinispan's roadmap. We aim to provide rich tooling in this area, with many integration opportunities.
+      .row-fluid
+        .span1.pull-center
+          %i.enormous-icon.icon-resize-full.circled.pull-center.icon-2x
+        .span11
+          %h3 Support for Compute Grids
+          %p
+            Also on the roadmap is the ability to pass a Runnable around the grid. You will be able to push complex processing towards the server where data is local, and pull back results using a Future. This map/reduce style paradigm is common in applications where a large amount of data is needed to compute relatively small results.
+      .row-fluid
+        .span1.pull-center
+          %i.enormous-icon.icon-puzzle-piece.circled.pull-center.icon-2x
+        .span11
+          %h3 Massive heap
+          %p
+            If you have 100 blade servers, and each node has 2GB of space to dedicate to a replicated cache, you end up with 2 GB of total data. Every server is just a copy. On the other hand, with a distributed grid - assuming you want 1 copy per data item - you get a 100 GB memory backed virtual heap that is efficiently accessible from anywhere in the grid. Session affinity is not required, so you don't need fancy load balancing policies. Of course you can still use them for further optimisation. If a server fails, the grid simply creates new copies of the lost data, and puts them on other servers. This means that applications looking for ultimate performance are no longer forced to delegate the majority of their data lookups to a large single database server - that massive bottleneck that exists in over 80% of enterprise applications!
+
+
+  %hr
 
   %h2 Infinispan and JSR 107
   %p
