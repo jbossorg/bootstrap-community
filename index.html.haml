@@ -5,61 +5,31 @@ title: Infinispan Homepage
 
 / Main hero unit for a primary marketing message or call to action
 .row-fluid
+  / Main hero unit for a primary marketing message or call to action
   #myCarousel.carousel.slide
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
     / Carousel items
     .carousel-inner
-      .item.learning
-        .row-fluid
-          .span12
-            .hero-unit
-              .row-fluid
-                .span3.pull-center.well
-                  %h3 Follow a Maker
-                  %p See a maker you like? Follow them to show your interest and to get first dibs when they create an event.
-                .span3.pull-center.well
-                  %h3 Sign up or Apply
-                  %p Sign up for a workshop or apply for an apprenticeship and get started learning today - it’s super easy!
-                .span3.pull-center.well
-                  %h3 Meet up to Learn
-                  %p Get a taste of what its like to be a cobbler, a baker, a candlestick maker by working with the Maker in her workspace.
-                .span3.pull-center.well
-                  %h3 Show off yr Skilz
-                  %p We track the skills and tools you’re learning in every workshop & apprenticeship - eventually leading to a fab portfolio!
-
-      .item.overview.active
-        .row-fluid
-          .span12
-            .hero-unit
-              %h1 Infinispan
-              %p This is the basic template for the JBoss Community Bootstrap/Awestruct project sites. This is where you would put a marketing message.
-              %p<
-                %a.btn.btn-primary.btn-large(href="swatch.html") View the Swatches &raquo;
-
-      .item.leading
-        .row-fluid
-          .span12
-            .hero-unit
-              .row-fluid
-                .span4.pull-center.well
-                  %h3 Post an Idea
-                  %p Want to test out an idea by seeing who's interested? Post an idea, leave the dates "TBA", & we'll notify you as people follow it.
-                .span4.pull-center.well
-                  %h3 Set a Date
-                  %p Set a date when you're ready. We'll notify your followers and give them first dibs on signups. Then we'll notify the rest of the Guild.
-                .span4.pull-center.well
-                  %h3 Work Together
-                  %p When the date comes, we'll notify your participants and apprentices to remind them of details, and give them credit for their work.
-
+      .active.item
+        %img(src="http://static.jboss.org/images/infinispan/carousel_img1.png")
+      .item
+        %img(src="http://static.jboss.org/images/infinispan/carousel_img2.png")
+      .item
+        %img(src="http://static.jboss.org/images/infinispan/carousel_img3.png")
+      .item
+        %img(src="http://static.jboss.org/images/infinispan/carousel_img4.png")
     / Carousel nav
-    %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"} ‹
-    %a.left.carousel-control.extra{"data-slide" => "prev", :href => "#myCarousel"}
-    %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"} ›
-    %a.right.carousel-control.extra{"data-slide" => "next", :href => "#myCarousel"}
+    %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+    %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
 
 
 / section containing blog posts
-#equalHeightsB.row-fluid.equalHero.posts
-  .span6
+#equalHeightsB.row-fluid.posts
+  .span6.well
     %h3 News
     %a.seemore See news feed
     %ul.listPosts
@@ -79,7 +49,7 @@ title: Infinispan Homepage
         %span.meta January 10, 2012
         %a{:href => "blog-single.html"} Aliquam posuere ac dolor ultricies hendrerit. Nunc varius ac magna ut tristique. Proin id erat sed risus sollicitudin laoreet. Donec sagittis lacinia lorem, sed aliquam quam tempus id.
 
-  .span6
+  .span6.well
     %h3 Forums
     %a.seemore See all forums
     %ul.listPosts
