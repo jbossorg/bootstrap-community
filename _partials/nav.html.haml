@@ -18,7 +18,7 @@
 					%li{:class=>"#{'active' if page.output_path.start_with?('/getinvolved') }" }<
 						%a(href="#{site.base_url}/getinvolved.html") Get Involved
 					%li.dropdown
-						%a.dropdown-toggle(href="#" data-toggle="dropdown")<
+						%a.dropdown-toggle(href="#{site.base_url}/download.html" data-toggle="dropdown")<
 							= precede 'Download ' do
 								%b.caret>
 						%ul.dropdown-menu
