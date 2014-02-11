@@ -1,0 +1,65 @@
+---
+layout: rightcol
+title: Virtual Databases
+---
+
+%h2 Virtual Databases
+.clear
+  %br/
+.uploaded-img
+  %img{alt: "Virtual Database Internals", height: "319", src: "#{site.project_images_url}/teiid-vdbinternals.png", style: "margin:0 auto;", width: "356"}/
+%table
+  %tr
+    %td
+      %h4 The Virtual Database
+      %p
+        A virtual database (or VDB) is a container for components used to integrate data from multiple data sources, so that they can be accessed in an integrated manner through a single, uniform API.
+        %br/
+        %br/
+        A VDB contains models, which define the structural characteristics of data sources, views, and Web services.
+.clear
+  %br/
+%h3 VDB Creation and Validation
+%p There are two types VDBs available. Dynamic VDB is defined using a simple XML file. This XML file defines the sources it is trying to integrate and then provides access through JDBC where user queries can be written against this VDB using all the sources defined as if they are in single source. Dynamic VDB does not offer view/abstact layers.
+%p Teiid Designer, a Eclipse-based GUI tool can be used to create VDBs. This Eclipse-based tool lets you not only define source models and import metadata and statistics from them, but also allows you to define relational and XML views on top of those sources. This allows you to abstract the structure of the information you expose to and use in your applications from the underlying physical data structures.
+%p VDBs can contain one or more models representing the information to be integrated and exposed to consuming applications. Models must be in a valid state in order for the VDB to be used for data access. Validation of a single model means that it must be in a self-consistent and complete state, meaning that there are no "missing pieces" and no references to non-existent entities. Validation of multiple models checks that all inter-model dependencies are present and resolvable.
+%p A VDB must always be in a complete state, meaning that all information is contained within the VDB itself -- there are no external dependencies.
+.clear
+  %br/
+.uploaded-img
+  %img{alt: "Teiid VDB Deployment", height: "256", src: "#{site.project_images_url}/teiid-queryengine.png", style: "margin:0 auto;", width: "503"}/
+%table
+  %tr
+    %td
+      %h4 Deploying a VDB for Data Access
+      %p After a VDB is defined, it must be deployed to the Teiid runtime to be accessed. 
+      %ul
+        %li The VDB needs to be deployed to a Teiid Server, if there are no errors during deployment and underlying data sources are configured correctly, then VDB will be accessible to your client application.
+.clear
+  %br/
+%h3 Accessing Multiple Sources Through a VDB
+.section
+  %p Once VDB is deployed, your VDB can be accessed through JDBC-SQL, SOAP (Web Services), SOAP-SQL, or XQuery.
+.clear
+  %br/
+%h3 VDBs, Translators and Resource Adaptors
+.section
+  %p VDBs contain two primary varieties of model types - Source and View models. Source models represent the structure and characteristics of physical data sources, whereas view models represent the structure and characteristics of abstract structures you want to expose to your applications.
+  %p Source models must be associated with a Translator and a Resource Adaptor. A Translator provides a abstraction layer between Teiid Query Engine and physical data source, that knows how to convert Teiid issued query commands into source specific commands and execute them using the Resource Adaptor. It also have smarts to convert the result data that came from the physical source into a form that Teiid Query engine is expecting.
+  %p
+    A Resouce Adaptor provides the connectivity to the physical data source. This also provides way to natively issue commands and gather results. A Resource Adaptor can be a RDBMS data source, Web Service, text file, connection to main frame etc. This is often is
+    = succeed "\u{a0}Connector." do
+      %a{href: "http://java.sun.com/j2ee/connector/"} JCA
+  %p You can define configuration for Translators and Resource Adaptors in Teiid Designer.  Once defined, Translator information along with the JNDI name of the Resource Adaptor is stored with a VDB, so that when a VDB is exchanged, the existing settings can be used.
+%p Typically Resource Adaptor configuration information contains user-ids, passwords, URLs to the physical data sources. This information is not stored with the VDB. These are automatically created by Designer for development purposes, however user need to migrate or create new ones for the production environment themselfs using the provided tools like Admin Console.
+.clear
+  %br/
+%h3 VDB Execution in Teiid Designer
+.section
+  %p VDBs can be tested in Teiid Designer by issuing SQL queries in the SQL Explorer perspective. In this way, you can iterate between defining your integration models and testing them out to see if they are yielding the expected results.
+  %p Your VDB must define its Translator and Resource Adapter with all source models in order to be executable.
+.clear
+  %br/
+%h3 VDB File Formats
+.section VDBs are stored in an archive file format, similar to a standard  Java JAR format.
+%p Dynamic VDBs are XML files. The schema for the XML file can be found in the Teiid documents.

@@ -1,0 +1,190 @@
+---
+layout: rightcol
+title: Why Teiid?
+---
+
+%h2 Why Teiid?
+.clear
+  %br/
+%strong 1. Familiar Interface: JDBC
+%p
+  %span.product Teiid
+  has a very familiar interface: JDBC!  Every Java developer is familiar with JDBC access to data sources.  Now leverage your knowledge of the JDBC  standard to access
+  %em all
+  your data sources.
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    JDBC 4.0 API
+  %li
+    %i.icon-li.icon-ok-sign
+    DML SQL-92 support (with select SQL-99 and later features)
+  %li
+    %i.icon-li.icon-ok-sign
+    Support for standard JDBC scalar functions
+.clear
+  %br/
+%strong 2. Familiar Query Language: SQL
+%p
+  Want to query non-SQL sources in the same way you do with SQL sources? With Teiid, you can! You can access data from any types of sources, and interact with those sources using
+  %u a single flavor of SQL
+  \- even if the native sources do not understand SQL!
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    DML SQL-92 support (with select SQL-99 and later features)
+  %li
+    %i.icon-li.icon-ok-sign
+    Issue SQL to any data source -- see  currently supported sources
+  %li
+    %i.icon-li.icon-ok-sign
+    Level the data access playing field, using one version of SQL dialect, scalar functions, and datatypes
+.clear
+  %br/
+%strong 3. Multiple Sources Look Like One
+%p
+  With Teiid, you can join and union data that resides in very dissimilar data sources. Multiple sources suddenly look like a
+  %em single
+  source to your application.
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    Joins across data sources
+  %li
+    %i.icon-li.icon-ok-sign
+    Unions across data sources
+.clear
+  %br/
+%strong 4. Easy To Deploy
+%p
+  The
+  %span.product Teiid query engine
+  is a Java component - it plugs right    into your application, like any other Java library. Deployment is simple.
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    Embed in plain old Java app
+  %li
+    %i.icon-li.icon-ok-sign
+    Deploy to app servers
+  %li
+    %i.icon-li.icon-ok-sign
+    Available as a stand-alone server in
+    %a{href: "http://www.jboss.com/products/platforms/dataservices"} JBoss Enterprise Data Services Platform
+.clear
+  %br/
+%strong 5. Eliminate Hand-coded Data Access Logic
+%p Real applications often access more than one data source.  We know that. Teiid technology from MetaMatrix has been in the business of enterprise data integration     since 1999.  Many of you have built your own frameworks to handle integrating     multiple sources, and have realized the difficulty of doing that in a generic     manner that performs and scales well under real use conditions.       Now you can retire your custom frameworks and hand-coded logic, and use a      dedicated query component for all your data access needs.  This lets you focus      on the logic on top of the data access layer rather than the nuts and bolts of      accessing heterogeneous data uniformly.
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    %i Cheaper
+    \- than hand-coding and maintaining hand-coded integration, and re-inventing integration logic on every project
+  %li
+    %i.icon-li.icon-ok-sign
+    %i Better
+    \- than non-optimized integration logic that does not make use of a real query engine
+  %li
+    %i.icon-li.icon-ok-sign
+    %i Faster
+    \- to implement your projects, leveraging the integration logic already built into Teiid, and reusing that logic on other projects
+.clear
+  %br/
+%strong 6. Battle Tested - and Improving
+%p
+  You don't want to be a guinea pig for someone's "product" experiments. Don't worry - with Teiid, you won't have to. Teiid is a component form of the query engine that is the heart of the JBoss Enterprise Data Services Platform (JBEDSP), which is used by large commercial organizations, independent software vendors, and many federal agencies, including intelligence agencies responsible for protecting citizens in the U.S. and other countries. These are organizations that cannot and do not play with toys, so you can have confidence that our products have been put through the ringer a number of times.
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    Used by Fortune 500 companies and Government Intel agencies
+  %li
+    %i.icon-li.icon-ok-sign
+    Used by independent software vendors
+  %li
+    %i.icon-li.icon-ok-sign
+    Large data sets, small data sets, data sets with quirky characteristics
+  %li
+    %i.icon-li.icon-ok-sign
+    Relational data, XML data, and data from sources you've never even heard of!
+%p  
+.clear
+  %br/
+%strong 7. Optimized
+%p
+  Part of being battle-tested is operating at expected levels of performance in a wide variety of enterprise solutions. Teiid accounts for the unique requirements of integrating information
+  %em across
+  disparate data sources.
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    Cost-based optimizer
+  %li
+    %i.icon-li.icon-ok-sign
+    Accounts for federating data across heterogeneous systems
+  %li
+    %i.icon-li.icon-ok-sign
+    Caches result sets for user queries and queries to sources
+.clear
+  %br/
+%strong 8. Scriptable Integration
+%p Teiid comes with an administrative shell that allows programatic access to administrative features.
+.clear
+  %br/
+%strong 9. Works Like a Charm - Fast
+%p
+  Your time is precious - we know that. You can't waste your time investigating every newfangled product and solution marketed to you. With Teiid, you don't have to. In 30 minutes, you can demonstrate to yourself that you can issue federated queries against 2 of your own databases.
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    %a{href: "#{site.base_url}/quickstart.html"} 30 minutes to get started
+.clear
+  %br/
+%strong 10. Tip of the Iceberg
+%p
+  Still not convinced?  What if we told you that all this was merely the tip of the iceberg?     That's right - there's more!       Not only can you do more with the Teiid query engine, but everything you do can be leveraged and extended with the Teiid Server and
+  %span.product JBoss Enterprise
+  Data Services Platform.
+%p With Teiid Designer, you get the following additional functionality:
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    Data abstraction through an Eclipse-based modeling tool
+    %ul
+      %li
+        Relational views - of
+        %em any
+        type of data
+      %li XML views of non-XML data (XSD-compliant)
+  %li
+    %i.icon-li.icon-ok-sign
+    Data Services - rapid design and deploy
+    %ul
+      %li For Web services architectures
+      %li For general services-oriented architectures (SOAs)
+%p
+  Moving up to the
+  %a{href: "http://www.jboss.com/products/platforms/dataservices"} JBoss Enterprise Data Services Platform
+  suite enables you to take advantage of the following enterprise-level features:
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-ok-sign
+    Extensive connectivity to enterprise sources
+    %ul
+      %li Support for packaged applications such as SAP
+  %li
+    %i.icon-li.icon-ok-sign
+    Security
+    %ul
+      %li Authentication and authorization (entitlements)
+      %li Integration of external authentication/user systems
+  %li
+    %i.icon-li.icon-ok-sign
+    Model management
+    %ul
+      %li Searchable metadata for dependency and impact analyses
+  %li
+    %i.icon-li.icon-ok-sign
+    Monitoring and administration
+    %ul
+      %li
+        %span.product Enterprise administration and monitoring console

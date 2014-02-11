@@ -1,0 +1,310 @@
+---
+layout: project
+title: History
+---
+
+%h2 History
+.clear
+  %br/
+%h3 Teiid and MetaMatrix
+%p MetaMatrix pioneered the EII (Enterprise Information Integration) market segment.  Through many product iterations, the core of the MetaMatrix technology represents an advanced and proven approach to scalable information using a relational abstraction.
+%p
+  MetaMatrix joined
+  %a{href: "http://www.redhat.com/promo/next/faq.html"} Red Hat
+  under JBoss Middleware in April of 2007.  At the time MetaMatrix followed a closed source model.  Now, the MetaMatrix approach to EII will continue to thrive as the community driven
+  = succeed "," do
+    %a{href: "#{site.base_url}/teiid.html"} Teiid Project
+  with a subscription based product
+  %a{href: "http://www.jboss.com/products/platforms/dataservices"} JBoss Enterprise Data Services Platform
+  offering the renowned support of Red Hat/JBoss.
+%p
+  The Teiid code line was started in parallel with the 5.5.2 release effort.  The current state of Teiid incorporates relevant fixes available in subsequent service packs and originating through our professional support.  However the product and feature set of Teiid is different from MetaMatrix.  Foremost Teiid encompasses only the MetaMatrix server and related components - the Designer is its own project at
+  = succeed ".\u{a0}" do
+    %a{href: "http://www.jboss.org/teiiddesigner"} http://www.jboss.org/teiiddesigner
+  Next major components are evolving (Console -> 
+  = succeed ")" do
+    %a{href: "http://www.jboss.com/products/jbosson/"} JON
+  or have been removed (QueryBuilder).  Finally important extension APIs have changed/and or been supplanted by other mechanisms.  Please consult Teiid the release notes, documentation, and forums if you experience an issue migrating from MetaMatrix.
+.alert.alert-info
+  Note that the
+  %a{href: "http://www.jboss.com/products/platforms/dataservices"} JBoss Enterprise Data Services Platform
+  %p
+    %a{href: "http://www.jboss.com/products/platforms/dataservices"} product will focus on providing documentation and additional briding code to ease the transition from MetaMatrix to Teiid.
+.clear
+  %br/
+%h3 MetaMatrix Release History
+%p The following table provides an overview of previous MetaMatrix releases.
+%table.deftable.table-bordered.tech.table{cellspacing: "0", width: "100%"}
+  %thead
+    %tr
+      %th Major Release
+      %th Date
+      %th Release
+      %th Description
+  %tbody
+    %tr
+      %td.termFirst{align: "center", rowspan: "5"}
+        %strong
+          5.5
+          %br/
+          %br/
+          (Seneca)
+      %td.termFirst 11/09
+      %td.termFirst 5.5 SP4
+      %td.defFirst
+        %p MetaMatrix Server runs on JDK 1.6 and supports clients running on both JDK 1.5 and 1.6.
+        %p Added support for correlated sub-queries in the ON clause.
+        %p The Salesforce connector supports Salesforce API version 14 and supports the QueryAll operator and two new functions, getUpdated( ) and getDeleted()
+    %tr
+      %td.term 10/24/08
+      %td.term 5.5 SP3
+      %td.def
+        %p User productivity enhancements including: Data and transformation preview capability in Designer, simplified views for managing data source connections and user-defined functions, and simple publish/unpublish to UDDI registries.
+        %p Add support for these data sources: Salesforce.com, LDAP v3, Oracle 11g XA, MySQL 5 XA, PostgreSQL 8.1 XA.  Add support for the following as a metadata and confg repository: Oracle 11g, MySQL 5, PostgreSQL 8.1. SQL Server 2005.  Add support for 64-bit Windows.
+        %p Tech preview integration with JBoss ON/Jopr.
+        %p Hibernate dialect included in JDBC client JAR.
+    %tr
+      %td.term 03/07/08 
+      %td.term 5.5 SP2
+      %td.def
+        XA transaction processing and performance improvements.  Replaced legacy XA solution with
+        = succeed "." do
+          %a{href: "http://www.jboss.org/jbosstm"} JBoss Transactions
+    %tr
+      %td.term 01/23/08 
+      %td.term 5.5 SP1
+      %td.def
+        %p Availability of Enterprise Designer on Linux in addition to Windows.  Minor language enhancements to facilitate integration with business intelligence tools.
+    %tr
+      %td.term 09/28/07
+      %td.term 5.5
+      %td.def Greatly simplified/enhanced LDAP integration. LOB type streaming throughout MetaMatrix Server. XML document query processing performance significantly improved. Implicit and Explicit temp table creation. UI performance improvements in Enterprise Designer. New metadata repository structure/implementation.
+    %tr
+      %td.term{align: "center", rowspan: "4"}
+        %strong
+          5
+          %br/
+          %br/
+          (Lyra)
+      %td.term{align: "center"} 05/03/07
+      %td.term 5.0 SP3
+      %td.def Improved criteria pushdown for left and right outer joins. Upgraded MetaIntegration bridge to version 5.1.1. Added support for ERwin 7 import. Improved indexing service by synchronizing the processing by model ID. This means that if a request is made on the same model, that they will be queued in order so that they are processed one-at-a-time. Also, Connector bindings are now scoped to VDBs.
+    %tr
+      %td.term 11/30/06
+      %td.term 5.0 SP2
+      %td.def Virtual procedures can now contain dynamic SQL, composed during the execution of the procedure. Our message structure visualization enhancements started in SP1 were further improved in this release, allowing editing of datatypes when navigating a complex XML schema.  Enhanced functionality for selecting and editing inputs for Web service operations in the Designer.
+    %tr
+      %td.term 8/7/06
+      %td.term 5.0 SP1
+      %td.def Lots of new functionality.  We added 'native' support for XML sources, with a new XML Service model type, XML connectors, and XQuery-based XML Service Views; all integrated through the MetaMatrix query engine. Designer sports a new input parameter editor to make it easier to define XPaths to convert from doc-literal XSDs to scalar parameters. Modeling of XML messages also got easier, with hierarchical views showing leaf-structures. A new diagnostics packager has been added to make it easier to interact with MetaMatrix Tech Support. A new Web Service importer makes it easier than ever to define a Relational model for automatically transforming Web service XML structure to flattened relational, when you need to integrate with other relational sources.
+    %tr
+      %td.term 6/1/06
+      %td.term 5.0
+      %td.def
+        Two new products: MetaMatrix Dimension and MetaMatrix Query. Automatic generation of Web services from multiple relational sources in MetaMatrix Designer. Cost-based optimization and significant performance improvements in the Enterprise Server. Support for Apache Derby, MySQL, and PostgreSQL data sources. Introduction of the Dev Central community Web site (now
+        = succeed ")." do
+          %a{href: "http://www.teiidproject.org"} www.teiidproject.org
+    %tr
+      %td.term{align: "center", rowspan: "4"}
+        %strong
+          4.3
+          %br/
+          %br/
+          (Orion)
+      %td.term 12/16/05
+      %td.term 4.3 SP3
+      %td.def Support for named parameters in MetaMatrix procedure language; auto-creation of Web service from relational models; auto-creation of virtual relational model from XSD; performance and query optimization improvements; text importer improvements (functional and usability); numerous fixes to ERwin importer; performance and usability improvements in XML modeling / mapping logic
+    %tr
+      %td.term 11/23/05
+      %td.term 4.3 SP2
+      %td.def Performance and query optimization improvements; text importer improvements (functional and usability); numerous fixes to ERwin importer; performance and usability improvements in XML modeling / mapping logic
+    %tr
+      %td.term 10/17/05
+      %td.term 4.3 SP1
+      %td.def Performance and query optimization improvements; text importer improvements (functional and usability); numerous fixes to ERwin importer; performance and usability improvements in XML modeling / mapping logic
+    %tr
+      %td.term 09/15/05
+      %td.term 4.3
+      %td.def VDB Execution in Modeler (using embedded query engine); simple datatype editor; creation of virtual layers using System Catalog; automatic XSD generation from relational models; upgrade to Eclipse 3.1; distributed query processor (DQP) component for ISVs; Administrative API for Server and DQP; XML streaming; significant Server performance improvements; Web Services made WS-I standards-compliant.
+    %tr
+      %td.term{align: "center", rowspan: "3"}
+        %strong
+          4.2
+          %br/
+          %br/
+          (Pegasus)
+      %td.term 06/17/05
+      %td.term 4.2 SP2
+      %td.def ODBC naming improvements; Drag and drop for virtual transformation editing
+    %tr
+      %td.term 05/13/05
+      %td.term 4.2 SP1
+      %td.def Server performance improvements - buffer management, data serialization, partial aggregation to optimize joins over aggregates/unions; XML recursion enhancements.
+    %tr
+      %td.term 04/08/05
+      %td.term 4.2
+      %td.def Web services modeling, discovery, and execution - "data services"; integration with Systinet UDDI Registry; generic relationship builder; model difference analysis; metadata search and object finder; Popkin model importer; materialized views caching; result set caching; query optimizations; per-command trusted payload.
+    %tr
+      %td.term{align: "center", rowspan: "3"}
+        %strong
+          4.1
+          %br/
+          %br/
+          (Hercules)
+      %td.term 10/11/04
+      %td.term 4.1 SP2
+      %td.def  
+    %tr
+      %td.term 08/05/04
+      %td.term 4.1 SP1
+      %td.def  
+    %tr
+      %td.term 06/23/04
+      %td.term 4.1
+      %td.def UML and Relationship metamodels; UML-to-Relational model generator; Rose, Erwin importers; Support for streaming Blobs/Clobs; MetaMatrix virtual procedures; XQuery support; Server performance improvements.
+    %tr
+      %td.term{align: "center"}
+        %strong
+          4.0
+          %br/
+          %br/
+          (Apollo)
+      %td.term 02/27/04
+      %td.term 4.0
+      %td.def Modeler converted to run in Eclipse; rearchitected MetaMatrix Server and metadata Repository; design-time catalog for searching over Repository metadata.
+    %tr
+      %td.term{align: "center", rowspan: "8"}
+        %strong
+          3.1
+          %br/
+          %br/
+          (Gemini)
+      %td.term 02/13/04
+      %td.term 3.1 SP7
+      %td.def  
+    %tr
+      %td.term 11/18/03
+      %td.term 3.1 SP6
+      %td.def  
+    %tr
+      %td.term 10/03/03
+      %td.term 3.1 SP5
+      %td.def  
+    %tr
+      %td.term 08/29/03
+      %td.term 3.1 SP4
+      %td.def  
+    %tr
+      %td.term 07/25/03
+      %td.term 3.1 SP3
+      %td.def  
+    %tr
+      %td.term 06/20/03
+      %td.term 3.1 SP2
+      %td.def  
+    %tr
+      %td.term 05/10/03
+      %td.term 3.1 SP1
+      %td.def  
+    %tr
+      %td.term 04/01/03
+      %td.term 3.1
+      %td.def Updates through virtual groups; distributed, multi-source transactions (XA sources); stored queries, access patterns, prepared statements, subqueries; static costing using source cardinality metadata; metadata refresh/differencing capabilities in Modeler.
+    %tr
+      %td.term{align: "center", rowspan: "3"}
+        %strong
+          3.0
+          %br/
+          %br/
+          (Mercury)
+      %td.term 10/28/02
+      %td.term 3.0 SP2
+      %td.def  
+    %tr
+      %td.term 10/09/02
+      %td.term 3.0 SP1
+      %td.def  
+    %tr
+      %td.term 08/29/02
+      %td.term 3.0
+      %td.def XML data access from non-XML sources; XQuery interface; XML and datatypes modeling; SOAP API; buffer/cursor management; metadata import/export framework.
+    %tr
+      %td.term{align: "center", rowspan: "2"}
+        %strong
+          2.1
+          %br/
+          %br/
+          (Rushmore)
+      %td.term 04/19/02
+      %td.term 2.1 SP1
+      %td.def  
+    %tr
+      %td.term 03/15/02
+      %td.term 2.1
+      %td.def Ad hoc search capability in Repository; metadata viewer tool.
+    %tr
+      %td.term{align: "center", rowspan: "2"}
+        %strong
+          2.0
+          %br/
+          %br/
+          (Golden Gate)
+      %td.term 12/19/01
+      %td.term 2.0 SP1
+      %td.def  
+    %tr
+      %td.term 11/16/01
+      %td.term 2.0
+      %td.def MOF/XMI-based metadata representation; metadata Repository; UML diagram-centric Modeler; data access through virtual metadata layer; JDBC API for Server.
+    %tr
+      %td.term{align: "center", rowspan: "4"}
+        %strong
+          1.3
+          %br/
+          %br/
+          (Somerset)
+      %td.term 08/29/01
+      %td.term 1.3 SP3
+      %td.def  
+    %tr
+      %td.term 07/25/01
+      %td.term 1.3 SP2
+      %td.def  
+    %tr
+      %td.term 06/26/01
+      %td.term 1.3 SP1
+      %td.def  
+    %tr
+      %td.term 06/22/01
+      %td.term 1.3
+      %td.def Single-source update capability; user-controlled transactions; Server monitoring via Console.
+    %tr
+      %td.term{align: "center"}
+        %strong
+          1.2
+          %br/
+          %br/
+          (Gateway Arch)
+      %td.term 03/08/01
+      %td.term 1.2
+      %td.def Connector Development Kit (CDK) tool; simplified configuration management & installation.
+    %tr
+      %td.term{align: "center"}
+        %strong 1.1
+      %td.term 01/29/01
+      %td.term 1.1
+      %td.def SQL-based data interface; RDBMS for internal persistence; QueryBuilder tool.
+    %tr
+      %td.term{align: "center", rowspan: "3"}
+        %strong 1.0
+      %td.term 07/20/00
+      %td.term 1.0 SP2
+      %td.def  
+    %tr
+      %td.term 07/05/00
+      %td.term 1.0 SP1
+      %td.def  
+    %tr
+      %td.term 06/21/00
+      %td.term 1.0
+      %td.def Server, Modeler, Console; cross-source queries; relational algebra-based query planning; user authentication & data authorization.

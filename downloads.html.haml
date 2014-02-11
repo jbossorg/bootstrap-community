@@ -4,14 +4,156 @@ rightcol_partial: rightcol-downloads.html.haml
 title: Downloads
 ---
 
-
-/ Main hero unit for a primary marketing message or call to action
-.row-fluid
-  %h1 Project Name Downloads
-  %p Latest Releaase 5.6.0
-  %p<
-    %a.btn.btn-primary.btn-large(href="swatch.html") View the Swatches &raquo;
-
-  %hr
-
-/ Example Content
+%h2 Downloads
+%table.table.table-bordered.table-striped{align: "left", border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %thead
+    %tr.header
+      %th Download
+      %th Stable
+      %th Unstable
+  %tbody
+    %tr.evenRow
+      %td Teiid Runtime
+      %td
+        %a.td-download{href: "https://sourceforge.net/projects/teiid/files/teiid-8.6.0.Final-jboss-dist.zip/download"} 8.6 Final*
+        %br/
+        / <a class="td-download" href="https://sourceforge.net/projects/teiid/files/teiid-8.3.1.patch.zip/download">8.3 Patch 2****</a>
+        %a.td-download{href: "http://sourceforge.net/projects/resteasy/files/Resteasy%20JAX-RS/2.3.6.Final/resteasy-jaxrs-2.3.6.Final-all.zip/download"} RestEasy JAXRS Patch****
+      %td
+        %a.td-download{href: "https://sourceforge.net/projects/teiid/files/teiid-8.7.0.Alpha2-jboss-dist.zip/download"} 8.7 Alpha2*
+        %br/
+        %a.td-download{href: "http://sourceforge.net/projects/resteasy/files/Resteasy%20JAX-RS/2.3.6.Final/resteasy-jaxrs-2.3.6.Final-all.zip/download"} RestEasy JAXRS Patch****
+    %tr.oddRow
+      %td Teiid Embedded
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.6.0.Final-embedded-dist.zip/download"} 8.6 Final**
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.7.0.Alpha2-embedded-dist.zip/download"} 8.7 Alpha2**
+    %tr.evenRow
+      %td Teiid AdminShell
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.6.0.Final-adminshell-dist.zip/download"} 8.6 Final
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.7.0.Alpha2-adminshell-dist.zip/download"} 8.7 Alpha2
+    %tr.oddRow
+      %td JDBC Driver
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.6.0.Final-jdbc.jar/download"} 8.6 Final
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.7.0.Alpha2-jdbc.jar/download"} 8.7 Alpha2
+    %tr.evenRow
+      %td 1.5 Client Driver
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.6.0.Final-jdbc-jdk15.jar/download"} 8.6 Final
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.7.0.Alpha2-jdbc-jdk15.jar/download"} 8.7 Alpha2
+    %tr.oddRow
+      %td 1.4 Client Driver
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.6.0.Final-jdbc-jdk14.jar/download"} 8.6 Final
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.7.0.Alpha2-jdbc-jdk14.jar/download"} 8.7 Alpha2
+    %tr.evenRow
+      %td Teiid Source
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.6.0.Final-src.zip/download"} 8.6 Final
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid-8.7.0.Alpha2-src.zip/download"} 8.7 Alpha2
+    %tr.oddRow
+      %td Release Notes / Change Log
+      %td
+        %a{href: "http://docs.jboss.org/teiid/8.6.0.Final/teiid-releasenotes.html"} 8.6 Final
+      %td
+        %a{href: "https://issues.jboss.org/secure/ReleaseNote.jspa?projectId=12310782&version=12322510"} 8.7
+    %tr.evenRow
+      %td Teiid Web Console
+      %td
+        %a.td-download{href: "http://sourceforge.net/projects/teiid/files/webconsole/1.1/Final/teiid-console-dist-1.1.0.Final-jboss-as7.zip/download"} 1.1.Final
+      %td  
+    %tr.oddRow
+      %td Teiid RHQ Plugin
+      %td
+        %a.td-download{href: "http://downloads.jboss.org/teiid/rhq/1.0.0-Final/teiid-rhq-plugin-1.0.0-Final.jar"} 1.0 Final***
+      %td  
+%p  
+.alert.alert-block
+  %b * IMPORTANT NOTE:
+  Teiid 8.4+ is targeted for deployment in the
+  %strong EAP 6.1 Alpha
+  kit. 6.1 Beta (which is available on with a developer or paid subscription) is not supported yet.
+  %br/
+  %b ** IMPORTANT NOTE:
+  The embedded kit is provided as a tech preview.
+  %br/
+  %b ***
+  See the
+  %a{href: "https://community.jboss.org/wiki/NewTeiidRHQPluginForTeiid8x"} RHQ plugin installation instructions.
+  %br/
+  %b ****
+  An overlay patch for
+  = succeed "," do
+    %a{href: "https://issues.jboss.org/browse/TEIID-2450"} TEIID-2450
+  = succeed "," do
+    %a{href: "https://issues.jboss.org/browse/TEIID-2442"} TEIID-2442
+  = succeed "," do
+    %a{href: "https://issues.jboss.org/browse/TEIID-2484"} TEIID-2484
+  = succeed "." do
+    %a{href: "https://issues.jboss.org/browse/TEIID-2457"} TEIID-2457
+  %br/
+  %b ****
+  The community EAP 6.1 Alpha release contains RestEasy 2.3.5 however the resteasy-jaxrs module must be updated to RestEasy version 2.3.6 or later to properly utilize Teiid as an OData server.  Working under the modules/system/layers/base/org/jboss/resteasy/resteasy-jaxrs/main AS directory:
+  %ul
+    %li Remove async-http-servlet-3.0-2.3.5.Final.jar and resteasy-jaxrs-2.3.5.Final.jar.
+    %li Add async-http-servlet-3.0-2.3.6.Final.jar and resteasy-jaxrs-2.3.6.Final.jar from the resteasy-jaxrs-2.3.6.Final-all.zip lib.
+    %li Modify the module.xml resources to use the 2.3.6 version jars.
+%p
+  %a.td-download{href: "http://sourceforge.net/projects/teiid/files/teiid/"} All prior releases
+.clear
+  %br/
+%h2 Installation
+%p Teiid Requires:
+.proj_basics
+  %ul.icons-ul
+    %li
+      %i.icon-li.icon-play-sign
+      %a{href: "http://www.java.com/en/download/manual.jsp"} Java 1.6
+      (at least 1.6.0.18)
+    %li
+      %i.icon-li.icon-play-sign
+      %a{href: "http://www.jboss.org/jbossas/downloads.html"} JBoss AS
+      %ul.icons-ul
+        %li
+          %i.icon-li.icon-play-sign
+          EAP 6.1 Alpha for Teiid 8.4+
+        %li
+          %i.icon-li.icon-play-sign
+          7.1.1 for Teiid 8.0 - 8.3
+        %li
+          %i.icon-li.icon-play-sign
+          5.1.0 for Teiid 7.x
+    %li
+      %i.icon-li.icon-play-sign
+      %a{href: "http://www.jboss.org/teiiddesigner/downloads.html"} Teiid Designer
+      for creation of non-dynamic VDBs
+%p
+  For complete installation instructions please refer to "Administrator's Guide" in
+  = succeed "." do
+    %a{href: "http://teiid.org/docs"} Teiid Documents section
+%p For Quick "standalone" mode installation of the latest Teiid
+%ol
+  %li Install JBoss AS 7.1.1 or EAP 6.1.Alpha
+  %li UnZip Teiid archive over the installed JBoss AS
+  %li start the server using "standalone.sh -c standalone-teiid.xml" command
+%p Additionally you'll need to supply any third-party jars needed to connect to your enterprise sources like JDBC Drivers.
+%p
+  Teiid JDBC Driver 
+  %code> teiid-<version>-jdbc.jar
+  \ can be downloaed from above links for accesing a VDB through JDBC.
+%p
+  Follow the
+  %a{href: "#{site.base_url}/quickstart.html"} quick start
+  and the
+  %a{href: "https://www.jboss.org/community/wiki/TheTeiidDesignerProject"} Teiid Designer documentation
+  to understand how to create a VDB.  Use and contribute to the
+  %span{style: "text-decoration: underline;"} Teiid wiki
+  for additional examples and configuration options for Teiid.

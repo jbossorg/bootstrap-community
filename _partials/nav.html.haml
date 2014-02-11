@@ -19,54 +19,52 @@
                 %b.caret>
             %ul.dropdown-menu
               %li<
-                %a(href="#") Overview
+                %a(href="https://www.jboss.org/community/docs/DOC-12956") Wiki
               %li<
-                %a(href="#") Wiki
+                %a(href="https://community.jboss.org/en/teiid") User Forum
               %li<
-                %a(href="#") User Forum
+                %a(href="https://community.jboss.org/en/teiid/dev") Developer Forum
               %li<
-                %a(href="#") Mailing Lists
+                %a(href="#{site.base_url}/mailinglists.html") Mailing Lists
               %li<
-                %a(href="#") Chat
+                %a(href="#{site.base_url}/chat.html") Chat
               %li<
-                %a(href="#") Blog
+                %a(href="http://teiid.blogspot.com/") Blog
           %li{:class=>"#{'active' if page.output_path.start_with?('/issues') }" }<
-            %a(href="#{site.base_url}/issues.html") Issues
-          %li{:class=>"#{'active' if page.output_path.start_with?('/source') }" }<
-            %a(href="#{site.base_url}/source.html") Source Code
+            %a(href="https://jira.jboss.org/jira/browse/TEIID") Issues
+          %li.dropdown
+            %a.dropdown-toggle(href="#" data-toggle="dropdown")<
+              = precede 'Source Code ' do
+                %b.caret>
+            %ul.dropdown-menu
+              %li<
+                %a(href="https://github.com/teiid/teiid") GitHub
+              %li<
+                %a(href="http://fisheye.jboss.org/browse/Teiid") FishEye
+              %li<
+                %a(href="http://viewvc.jboss.org/cgi-bin/viewvc.cgi/teiid/") ViewVC
           %li{:class=>"#{'active' if page.output_path.start_with?('/build') }" }<
-            %a(href="#{site.base_url}/build.html") Build
+            %a(href="http://hudson.jboss.org/hudson/job/Teiid%20-%20Continuous%20Build/") Build
           %li.dropdown
             %a.dropdown-toggle(href="#" data-toggle="dropdown")<
               = precede 'Follow Us ' do
                 %b.caret>
             %ul.dropdown-menu.projectsocialmedia
               %li<
-                %a(href="#")<
+                %a(href="https://twitter.com/#!/teiid")<
                   %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_twitter.png")
-              %li<
-                %a(href="#")<
-                  %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_googleplus.png")
-              %li<
-                %a(href="#")<
-                  %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_facebook.png")
-              %li<
-                %a(href="#")<
-                  %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_youtube.png")
-              %li<
-                %a(href="#")<
-                  %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_linkedin.png")
-          %li.dropdown
-            %a.dropdown-toggle(href="#" data-toggle="dropdown")<
-              = precede 'Layouts ' do
-                %b.caret>
-            %ul.dropdown-menu
-              %li<
-                %a(href="#{site.base_url}/rightcol.html") Right Column
-              %li<
-                %a(href="#{site.base_url}/leftcol.html") Left Column
-              %li<
-                %a(href="#{site.base_url}/bothcol.html") 3 Columns
+              / %li<
+              /   %a(href="#")<
+              /     %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_googleplus.png")
+              / %li<
+              /   %a(href="#")<
+              /     %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_facebook.png")
+              / %li<
+              /   %a(href="#")<
+              /     %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_youtube.png")
+              / %li<
+              /   %a(href="#")<
+              /     %img(src="#{site.jborg_images_url}/common/socialmedia_icon40_linkedin.png")
           %li.divider
 
         %ul.nav.pull-right

@@ -1,0 +1,47 @@
+---
+layout: rightcol
+title: SOAs
+---
+
+%h2 Service-Oriented Architectures and Data Services
+.clear
+  %br/
+.proj_define Service-oriented architectures are all the rage these days, and for good reason. The guiding principles of SOAs are based on lessons well-learned over the brief history of computing, most notably that of decoupling of system components. It is these same principles that motivate the use of data services in an SOA.
+.clear
+  %br/
+.uploaded-img
+  %img{alt: "", height: "514", src: "#{site.project_images_url}/teiid-soa.png", style: "margin:0 auto;", width: "556"}/
+%table
+  %tr
+    %td
+      %h3 SOAs and Abstraction
+      %p
+        Decoupling is
+        %em the
+        key concept in SOAs and is achieved through abstraction based on service interfaces. Business processes in an SOA represent a formalized, executable form of the actual enterprise's processes, but offer a layer of abstraction above the physical processes, be they automated or manual. Business processes are composed of business services. Just as business processes in an SOA represent an abstraction from their real-world counterparts, so do business services offer an abstraction of actual physical services. Decoupling through abstraction imbues SOAs with immense potential to model business operations independent of the IT infrastructure
+        = succeed "." do
+          %em du jour
+      %p
+        SOAs, as their name makes clear, are
+        %em architectures.
+        These architectures, as we've seen, involve business processes composed of business services. Business processes and services both make use of business information, which is likely resident in many different types and instances of databases and files. This information can be exposed to business services using the same service-oriented paradigm - as
+        %strong
+          %em data services.
+.clear
+  %br/
+%h3 Data Services
+%p
+  Just as business processes and services in an SOA represent abstractions - albeit executable ones - of their real-world counterparts, so too do
+  %strong data services
+  represent an abstraction of underlying enterprise information.  Data services expose information to business services in a form and through an interface amenable to those services.
+%p The form is generally some representation of business objects to be manipulated by business services and passed between services by business processes. Business objects may be simple tabular structures or complex nested structures. Almost always, though, they must be composed from information residing in more than one data source, often in different persistence formats. So a key requirement of data services is that they:
+%ul
+  %li expose integrated information in one or more desired formats, even if the original data are in different formats.
+%p The desired interface is dependent on the architecture being used. A Web service-based SOA will provide a SOAP or REST-based interface to XML-formatted business objects. A more traditional Java or C-language RCP-based architecture will require JDBC or ODBC access to tabular information, obtained from multiple data sources. So, a second key requirement of data services is that they:
+%ul
+  %li expose information through one or more consistent, standard interfaces, even if the original data are accessed through different interfaces.
+%p These two key requirements of data services are achieved by two different technologies:
+%ul
+  %li modeling to define the required format of data, integrated from the underlying sources; and
+  %li a query engine for processing these abstract definitions efficiently, exposing the integrated information through one or more interfaces.
+%p Together these form the basis for a data services architecture underpinning a robust SOA, making data available to business processes and services in the required format and through consistent, standard interfaces.

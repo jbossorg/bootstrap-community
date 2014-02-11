@@ -1,0 +1,84 @@
+---
+layout: rightcol
+title: Models
+---
+
+%h2 Models
+.clear
+  %br/
+.uploaded-img
+  %img{alt: "", height: "229", src: "#{site.project_images_url}/teiid-model-internals.png", style: "margin:0 auto;", width: "401"}/
+%table
+  %tr
+    %td
+      %p A model is a representation of a set of information constructs.  A familiar model is the relational model, which defines tables composed of columns and containing records of data.  Another familiar model is the XML model, which defines hierarchical data sets.
+      %p In Teiid, models are used to define the entities, and relationships between those entities, required to fully define the integration of information sets so that they may be accessed in a uniform manner using a single API and access protocol.
+      %p
+        %em Source
+        models define the structural and data characteristics of the information contained in data sources. Teiid uses the information in source models to access the information in multiple sources, so that from a user's viewpoint these all appear to be in a single source.
+      %p
+        In addition to source models, Teiid provides the ability to define a variety of view models.  These can be used to define a layer of abstraction above the physical layer, so that information can be presented to end users and consuming applications in business terms rather than as it is physically stored. These
+        %em business views
+        can be in a variety of forms: relational, XML, or Web services.  Views are defined using transformations between models.
+.clear
+  %br/
+%h3 Types of Models
+%p Teiid Designer can be used to model a variety of classes of models.  Each of these represent a conceptually different classification of models.
+.proj_basics
+  %ul.icons-ul
+    %li
+      %i.icon-li.icon-play-sign
+      %strong> Relational
+      , which model data that can be represented in table – columns and records – form. Relational models can represent structures found in relational databases, spreadsheets, text files, or simple Web services.
+    %li
+      %i.icon-li.icon-play-sign
+      %strong> XML
+      , which model the basic structures of XML documents. These can be “backed” by XML Schemas. XML models represent nested structures, including recursive hierarchies.
+    %li
+      %i.icon-li.icon-play-sign
+      %strong> XML Schema
+      , the W3C standard for formally defining the structure and constraints of XML documents, as well as the datatypes defining permissible values in XML documents.
+    %li
+      %i.icon-li.icon-play-sign
+      %strong> Web Services
+      , which define Web service interfaces, operations, and operation input and output parameters (in the form of XML Schemas).
+    %li
+      %i.icon-li.icon-play-sign
+      %strong> Model Extensions
+      , for defining property name/value extensions to other model classes.
+%p VDBs contain two primary varieties of model types - source and view. Source models represent the structure and characteristics of physical data sources, whereas view models represent the structure and characteristics of abstract structures you want to expose to your applications.
+.clear
+  %br/
+%h3 Models and VDBs
+.section
+  %p Models used for data integration are packaged into a virtual database (VDB). The models must be in a complete and consistent state when used for data integration. That is, the VDB must contain all the models and all resources they depend upon.
+  %p Models contained within a VDB can be imported into the Teiid Designer. In this way, VDBs can be used as a way to exchange a set of related models.
+.clear
+  %br/
+%h3 Models and Translators, Resource Adaptors
+.section
+  %p Source models must be configured with a Translator and a Resource Adaptor with them before a VDB is tested in Designer or deployed for data access.
+  %p It is possible that multiple models may use the same settings, but each model must define these configurations.
+.clear
+  %br/
+%h3 Model Validation
+.section
+  %p Models must be in a valid state in order to be used for data access. Validation of a single model means that it must be in a self-consistent and complete state, meaning that there are no "missing pieces" and no references to non-existent entities. Validation of multiple models checks that all inter-model dependencies are present and resolvable.
+  %p Models must always be validated when they are deployed in a VDB for data access purposes.
+.clear
+  %br/
+%h3 Model Execution in Teiid Designer
+.section
+  %p Models can be tested in the Teiid Designer by issuing SQL queries in the SQL Explorer perspective. In this way, you can iterate between defining your integration models and testing them out to see if they are yielding the expected results.
+.clear
+  %br/
+%h3 Model Files
+.section
+  %p Models are stored in XML format, using the XMI syntax defined by the OMG.
+  %p Model files should never be modified "by hand". While it is possible to do so, there is the possibility that you may corrupt the file such that it cannot be used within the JBoss Enterprise Data Services Platform.
+.clear
+  %br/
+%h3
+  Dynamic VDBs and Models
+  %br/
+%p The information in this artical applies to the VDBs that are built using the Teiid Designer. If you are building Dynamic VDBs, much of the information does not apply in that case. However, even Dynamic VDBs have models but they only define configuration for importing metadata and Translators and Resource Adaptors.

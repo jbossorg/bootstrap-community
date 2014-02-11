@@ -1,0 +1,36 @@
+---
+layout: rightcol
+title: Source Code
+---
+
+%h2 Source Code
+.clear
+  %br/
+%h4 GItHub
+%p
+  %a{href: "https://github.com/teiid/teiid"} https://github.com/teiid/teiid
+%h4 SVN (only versions prior to 8.2.Alpha2)
+.proj_basics
+  %ul.icons-ul
+    %li
+      %i.icon-li.icon-play-sign
+      Anonymous Access URL -
+      %a{href: "http://anonsvn.jboss.org/repos/teiid/"} http://anonsvn.jboss.org/repos/teiid/
+    %li
+      %i.icon-li.icon-play-sign
+      Secure Developer Access URL -
+      %a{href: "https://svn.jboss.org/repos/teiid/"} https://svn.jboss.org/repos/teiid/
+.alert.alert-block
+  %p
+    All major and minor releases have a tag in subversion.  If you use Eclipse for development, please see
+    = succeed "." do
+      %a{href: "http://www.jboss.org/community/docs/DOC-12955"} setting up your development environment
+.clear
+  %br/
+%h4 End-User Developers
+%p
+  Teiid can be used in application development in a number of ways: as a JDBC driver, through its administrative interface, or through one of its standard extensions.  See the
+  %a{href: "#{site.base_url}/docs.html"} Client Developer's Guide
+  for more.  End-user developers should develop using a released, stable,
+  %a{href: "#{site.base_url}/downloads.html"} binary version
+  of Teiid.  Regardless, we do encourage all developers to follow the development of the latest version.

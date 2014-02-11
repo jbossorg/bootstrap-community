@@ -1,0 +1,24 @@
+---
+layout: rightcol
+title: Tools
+---
+
+%h2 Tools
+.well To aid in the design and development of your data virtulization project, Teiid provides a number of tools to assist in every aspect of the project lifecycle.
+%h3 Design &amp; Development Tools
+%ol
+  %li
+    %a{:href => "http://www.jboss.org/teiiddesigner.html"} Teiid Designer
+    \: This is an
+    = succeed "-based" do
+      %a{:href => "http://www.eclipse.org"} Eclipse
+    modeling tool, used to create data source models and Virtual Databases (VDBs), which can be deployed into the Teiid runtime environment.
+  %li Connector Development Kit (CDK) : Currently Unavailable.
+%h3 Deployment &amp; Runtime Tools
+%ol
+  %li
+    %a{:href => "#{site.base_url}/tools/console.html"}> Teiid Console
+    \: Console is GUI based adminstrative and monitoring tool for Teiid Server. Using Console the user can deploy a VDB, start and stop connectors, change system properties and many more administraive tasks. Please note that Console does not work with Teiid in embedded mode.
+  %li
+    %a{:href => "#{site.base_url}/tools/adminshell.html"}> Admin Shell
+    \: Admin Shell is command line driven shell, that can be used either in script mode or interactive mode to perform administrative and monitoring tasks. This tool provides most of the functionality provided by the Console, however this tool lets you automate some of those repetative tasks.

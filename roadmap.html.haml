@@ -1,0 +1,729 @@
+---
+layout: rightcol
+title: Roadmap
+---
+
+%h2 Roadmap
+.clear
+  %br/
+.well
+  Teiid will attempt to release a major revision on a yearly basis.  Minor revisions will follow on approximately a quarterly basis and will be supported by the community until the next major or minor release is available.  Longer term support is available through our
+  = succeed "." do
+    %a{href: "http://www.jboss.com/products/platforms/dataservices"} JBoss platform offering
+%p
+  To see the development road map, please visit our
+  = succeed ".\u{a0}" do
+    %a{href: "https://jira.jboss.org/jira/browse/TEIID"} JIRA page
+  Future releases:
+%ul
+  %li Future Work -  more seamless drop-in scenarios.  Better built-in support for scale out scenarios.
+%p Other pending feature sets include integrated security modeling, and integration with ETL and BI tooling.
+%p Past Releases:
+%ul
+  %li
+    8.6
+    %ul
+      %li
+        TEIID-2424
+        %b OSGI Bundles
+        \- Teiid jars are now built also as OSGI bundles. A starter Karaf osgi container features.xml file is available in maven repository with the build
+      %li
+        TEIID-1311
+        %b Cassandra Connectivity
+        \- is now offered through a community contribution by Radek Koubský of a resource adapter and translator pair.  See the reference and admin guides for more.
+      %li
+        TEIID-2309
+        %b Conformed tables
+        \- a feature to improve planning when identical tables exist in multiple sources.
+      %li
+        TEIID-2685
+        %b SAP Netweaver
+        \- enhanced the OData translator for use with Netweaver.
+      %li
+        %b Direct Query Procedure Support
+        %ul
+          %li TEIID-2740 - MongoDB
+          %li TEIID-2734 - Cassandra
+%ul
+  %li
+    8.5
+    %ul
+      %li
+        TEIID-2528
+        %b Encrypted Buffer Files
+        \- the buffer manager now supports an option to encrypt Teiid temp data files using 128-bit AES.
+      %li
+        TEIID-2249
+        %b Dependent Join Enhancements
+        \-
+        %ul
+          %li TEIID-2559 greater control over full depdendent join pushdown has been added including make dep hint options max/join to control the extent of depdendent join pushdown.
+          %li TEIID-2555 the join hint enables the pushdown the entire dependent join when supported by the source.
+          %li TEIID-2558 JDBC translator support to dependent join pushdown for a broad set of sources including Oracle, PostgreSQL, MySQL, SQLServer, Sybase, etc.  use the enableDependentJoins translator property.
+        See the Reference for more.
+      %li
+        TEIID-2527
+        %b Configurable Runtime Multisource
+        \- the server will now allow multisource models to have sources added and removed at runtime.  See the admin addSource and removeSource methods.
+      %li
+        TEIID-2571
+        %b Broader Must Pushdown
+        \- must pushdown functions tied to a particular model that supports selects without from can now be called without at any time.
+      %li
+        TEIID-2572
+        %b Function native-query
+        \- source functions for most translators now support the native-query extension metadata property to specify alternative syntax.
+      %li
+        TEIID-2067
+        %b Global temporary tables
+        \- may now be declared that are backed by Teiid session specific instance tables.  See the Reference for more.
+      %li
+        TEIID-2443
+        %b Simple aggregate rollup
+        \- added support for a single ROLLUP grouping element to produce multiple levels of aggregation.  See the Reference for more.
+      %li
+        TEIID-2614
+        %b Anonymous procedure blocks
+        \- anonymous procedure blocks may be used as statements.  See the Reference for more.
+      %li
+        TEIID-247
+        %b Expanded array support
+        \- adding parsing and JDBC and other support for arrays.  See the Reference for more.  Note that this support should be considered a tech preview and will be expanded/refined over subsequent releases.
+      %li
+        TEIID-2584
+        %b Materialization management
+        \- added a tech preview of management routines for external materialized views including scheduled refresh via extension metadata properties.
+  %li
+    8.4
+    %ul
+      %li
+        TEIID-2444
+        %b EAP Platform
+        \- the deployment platform for Teiid has been changed to EAP 6.1.Alpha1
+      %li
+        TEIID-2429
+        %b Improved sort performance
+        \- improved sorts for large data sets especially under heavy load.
+      %li
+        TEIID-2449
+        %b VDB Zips
+        \- added the ability to deploy non-Designer based vdb zip artifacts with the ability to place DDL outside of the VDB.xml via the DDL-FILE metadata repository.
+      %li
+        TEIID-2423 TEIID-2470
+        %b Additional Embedded deployments
+        \- xml and zip vdb deployment options are available for Teiid Embedded.
+      %li
+        TEIID-1092
+        %b Session Variables
+        \- added the teiid_session_set and teiid_session_get methods to maintain session variables.
+      %li
+        TEIID-2326
+        %b Shared Mat Views
+        \- materialized views from imported vdbs will be reused rather than recreated in each importing vdb.
+      %li
+        TEIID-2344
+        %b Automatic DB Version Detection
+        \- the JDBC translator database version property in most circumstances will not need to be set manually - see the compatibility note below.
+      %li
+        TEIID-2453
+        %b STRING_AGG
+        Added the string_agg aggregate function for concatenating binary and character strings.
+      %li
+        TEIID-2504
+        %b Improved socket results processing
+        large results processing over a socket transport have been significantly improved for forward only results.  Scrollable results will have only a marginal improvement.
+      %li
+        TEIID-2427 TEIID-2311
+        %b Column Masking
+        added column masking and refined row-based security.  Also allow for permissions to be granted via the MetadataFactory methods addPermission and addColumnPermisison to enable adding roles via a MetadataRepository.
+      %li
+        TEIID-2507
+        %b Session scoped mat views
+        \- mat views can now be scoped to sessions via the cache hint, rather than to just the global scope.
+      %li
+        TEIID-2329
+        %b MongoDB Support
+        \- added a mongodb translator/connector with a wide feature set including pushdown support for lobs, composite keys, and embedded joins.  See the Reference for more.
+  %li
+    8.3
+    %ul
+      %li
+        TEIID-2253
+        %b Multi-source improvements
+        \- multi-source planning was significantly improved, which will result in much better plans when using multi-source models.     The user may also now configure the multi-source column name, auto-populate the multi-column in the actual metadata, and use non-literal multi-source column values.
+      %li
+        TEIID-1557
+        %b Generated Key Retrieval
+        \- JDBC now supports generated key retrieval, see the Client and the Developers Guides for more.
+      %li
+        TEIID-2311
+        %b Permission Conditions
+        \- data roles can now specify SQL conditions that will enforce row-based security and physical table insert/update checked constraints.  See the Reference Guide for more.
+      %li
+        TEIID-2341
+        %b Join Planning Improvements
+        \- ANSI join structures can now be preserved with the preserve hint, i.e. FROM /*+ PRESERVE */ (tbl1 INNER JOIN tbl2 ON ...), which is similar to the Oracle ORDERED hint.      Also sources restricted to only outer joins (such as Salesforce) can have INNER or effectively INNER joins pushed to them.
+      %li
+        TEIID-2312
+        %b Source security domains
+        \- Ldap, Salesforce, google-spreadsheet and ws (basic auth) translators can now define "security-domain" in their resource-adaptor configuration for security. When defined along with caller-identity the logged in user's credentials are passed to source for authentication.
+      %li
+        TEIID-2182
+        %b Events
+        \- Capture the VDB loading and unloading events now from registering a listener on EventDistributor
+      %li
+        TEIID-2241
+        %b CLI script for Standalone
+        \- Install Teiid into any AS7 standalone configuration using the provided CLI script.
+      %li
+        TEIID-2152
+        %b Basic MERGE support
+        \- support for a simplistic MERGE statement was added.  See the Reference for more.
+      %li
+        TEIID-1854
+        %b OData Transport
+        \- Access any deployed VDB into Teiid using OData protocol, essentially Teiid is now a OData server.
+      %li
+        TEIID-1757
+        %b OData Translator
+        \- A translator for OData based sources has been added.
+      %li
+        TEIID-2363
+        %b Concurrent Join Processing Enhancements
+        \- both sides of a join will processed more when possible.  See also the org.teiid.joinPrefetchBatches system property in the Admin Guide.
+      %li
+        TEIID-196
+        %b Source Temporary Tables
+        \- temporary (locally scoped) tables may be defined at runtime against physical sources with a CREATE FOREIGN TEMPORARY TABLE statement.  See the Reference for more.
+      %li
+        TEIID-2159
+        %b JSON Production
+        \- added the JSONARRAY, JSONARRAY_AGG, JSONOBJECT, and JSONPARSE constructs for producing JSON.  See the Reference for more.
+      %li
+        TEIID-2248
+        %b Bulk Salesforce Inserts
+        \- added the ability for the Salesforce translator to perform bulk inserts.
+  %li
+    8.2
+    %ul
+      %li
+        TEIID-1923
+        %b Teiid Console
+        \- A web based administrative console for Teiid.
+      %li
+        TEIID-2150
+        %b Positional procedure defaults
+        \- a procedure now may be called positionally with just the leading input parameters as long as all trailing parameters are out or defaultable.
+      %li
+        TEIID-2148
+        %b Streaming Improvements
+        \- the ws translator invoke/invokeHttp procedures now accept a "stream"" parameter to indicate that the result should be streamed directly without an intermediate copy being created.      Also intermediate document/blob copies are made concurrently with reading to reduce latency.
+      %li
+        TEIID-2158
+        %b Rest Services
+        \- when required extension metadata defined on the virtual procedure, a REST based service on that procedure is automatically generated and deployed upon VDB deployment.
+      %li
+        TEIID-2163
+        %b Binary XMLSERIALIZE
+        \- XMLSERIALIZE now supports blob/varbinary and the encoding/version and XMLDECLARATION options.
+      %li
+        TEIID-2141
+        %b OBJECTTABLE
+        \- was added to extract values from objects using arbitrary scripts.  See the Reference for usage.
+      %li
+        TEIID-2111
+        %b Vararg Procedures
+        \- variable argument procedures and functions can be created through DDL using the VARIADIC parameter type.  See the Reference for usage.
+      %li
+        TEIID-2195
+        %b Function Based Indexes
+        \- DDL can be used to specify function based indexes.  When used on an internal mat view it will create     the corresponding function based index automatically.  In any other circumstance, the metadata is not currently used.
+      %li
+        TEIID-2181
+        %b System query performance
+        \- system queries are now indexed on case-insensitive schema/table name columns.
+      %li
+        TEIID-2086
+        %b Transactional results caching
+        \- the result set cache is now transactional by default.
+      %li
+        TEIID-2210
+        %b Object Translator
+        \- the translator-object can support Infinispan Cache and other Map type caches.  See OBJECTTABLE for executing queries against this translator.
+      %li
+        TEIID-1386
+        %b Procedure exception handling
+        \- the Teiid procedure language now supports exception handling and emitting SQLWarnings.  See the Reference for syntax and usage.
+      %li
+        TEIID-2176,TEIID-2177
+        %b Native Query Support
+        \- JDBC, LDAP, SalesForce, JPA, OLAP translators now support execution of native queries directly against the source either through "native-query" extension metadata property or native procedure defined by their translator.
+      %li
+        TEIID-2227
+        %b Procedure RETURN statement
+        \- the Teiid procedure language now supports a RETURN statement.  See the Reference for syntax and usage.
+      %li
+        TEIID-2269
+        %b Vault Support
+        \- The transport's keystore and truststore passwords are now supported through vault based passwords.
+      %li
+        TEIID-1064
+        %b Google Spreadsheet Support
+        \- there is now support for querying Google Spreadsheets via Teiid.  See the Reference and Admin Guides for more.
+      %li
+        TEIID-2274, TEIID-2275, TEIID-2288, TEIID-2299
+        %b Converting examples to Quick Starts
+        \- The examples in the Teiid JBoss dist zip have been converted to Quick Starts and will now be found in the Quick Start kit.
+  %li
+    8.1
+    %ul
+      %li
+        TEIID-1366
+        %b VDB Reuse
+        a vdb.xml can now declare imported vdbs to reuse metadata.
+      %li
+        TEIID-2061
+        %b Comparable Object
+        \- the system property  org.teiid.comparableObject can be set to use  OBJECT values in  comparison/sorting/grouping operations.  It is  expected that the object  values correctly implement  Comparable.compareTo.
+      %li
+        TEIID-2083
+        %b Admin Metadata
+        \- you can now retrieve metadata in DDL from the admin api via the getSchema method.
+      %li
+        TEIID-2105
+        %b Improved VDB loading
+        \- vdb loading logic  was refined to make administration easier.   ExecutionFactory now has  is/setSourceRequiredForMetadata() to indicate  whether a source  connection is needed for the getMetadata call.
+      %li
+        TEIID-1598
+        %b Translator Result Caching
+        \- translators can interact with the result set caching facility via a CacheDirective.  See the Developer's Guide for more.
+      %li
+        TEIID-2077
+        %b Result reuse
+        \- the engine will  automatically detect if the same source query is  used multiple times in a  plan and reuse the result rather than issuing  another query.
+      %li
+        TEIID-2113
+        %b Misc parser improvements
+        \-  the parser will  now accept the LATERAL keyword for defining a LATERAL  join (previously  we just used the TABLE keyword), unary negation is now  supported e.g.  -col1, the FOR keyword is optional for TEXTAGG, and the  BNF documentation was dramatically improved.
+      %li
+        TEIID-2036
+        %b Dependent Join Array Comparison
+        \- platforms  supporting array comparisons can have multi-attribute  dependent joins  pushed down as array comparisons.  Oracle, PG, and H2  translators are  already marked as supporting array types.
+  %li
+    8.0
+    %ul
+      %li
+        %b DDL Based View Definitions
+        \- Define virtual tables, procedures and functions for Dynamic VDBs using DDL.
+      %li
+        %b MetadataRepository
+        \- Pluggable metadata facility for any VDB and models inside it.
+      %li
+        %b CallableStatement Named Parameters
+        \- you can now use CallableStatement named parameter get/set methods.
+      %li
+        %b New Translator capabilities
+        %ul
+          %li translators may indicate which convert functions they support
+          %li restrict non-join comparisons to only literals.
+          %li return ReusableExecution instances for processing nodes that issue multiple queries.
+          %li translators may indicate support for dependent join handling
+      %li
+        %b Continuous Asynch Queries
+        to process plans in a streamed window fashion the  TeiidStatement/TeiidPreparedStatement methods now take a RequestOptions  object to specify continuous mode.  See the Client and Developers Guides  for more.
+      %li
+        %b Texttable selectors
+        \- can be used to  selectively parse only record lines matching a given selector string.   Selectors may also be used for column values to join data from other  records positionally.
+      %li
+        %b Enhanced Comparison Support
+        \- see the Admin Guide more.
+        %ul
+          %li
+            %b Comparable LOBs
+            \- the system property org.teiid.comparableLobs can be set to use CLOB  and BLOB values in comparison/sorting/grouping operations.
+          %li
+            %b Padded Comparison
+            \- the system property org.teiid.padSpace can be set to effectively right pad strings to the same length for comparison.
+          %li
+            %b Collation Support
+            \- the system property org.teiid.collationLocale can be set to use a different collation than the Java UTF-16 default.
+      %li
+        %b VARBINARY type support
+        \- the Teiid VARBINARY type can now be used to support source BINARY and VARBINARY types.
+      %li
+        %b Greenplum Translator
+        \- for use with the Greenplum database.
+      %li
+        %b Enhanced parse/format pushdown
+        \- added more built-in support and extension points for parse/format  function pushdown.  Added parse/format timestamp handling for SQLServer,  Sybase, Oracle, and PostgreSQL.
+      %li
+        %b User Defined Aggregates
+        \- user defined aggregate functions can be defined via extension metadata, DDL, or connector metadata.
+      %li
+        %b SET PAYLOAD statement
+        \- SET PAYLOAD can be used to set a name value pair on a session scoped payload that will be sent with requests.
+      %li
+        %b ENCRYPT REQUESTS
+        \- encryptRequests may be used as a connection/datasource property when  not using SSL to indicate that request messgaes and any associated  payload should be encrypted.
+  %li
+    7.7
+    %ul
+      %li
+        %b Excel JDBC Translator
+        \- for use with Excel using the JDBC-ODBC bridge.
+      %li
+        %b Salesforce Aggregates
+        \- salesforce pushdown queries now support GROUP BY, HAVING, and the standard aggregate functions.
+      %li
+        %b Comparable LOBs
+        \- the system property org.teiid.comparableLobs can be set to use CLOB and BLOB values in comparison/sorting/grouping operations.
+      %li
+        %b Padded String Comparison
+        \- the system property org.teiid.padSpace can be set to effectively right pad strings to the same length for comparison.
+  %li
+    7.6
+    %ul
+      %li
+        %b Procedure language features
+        \- Added support for compound/block statements, BEGIN [[NOT] ATOMIC], loop/block labels, and the leave statement.  See the reference for more.
+      %li
+        %b File Enhancements
+        \- the file translator can now optionally (via the ExceptionIfFileNotFound property) throw an exception if the path refers to a file that doesn't exist.  The file resource adapter can be configured to map file names and can prevent parent path .. references.  See the Admin Guide or the file-ds.xml template for more.
+      %li
+        %b TEXTTABLE Enhancements
+        \- TEXTTABLE can now parse fixed width files that do not use a row delimiter and can optionally produce fixed values that haven't been trimmed.
+      %li
+        %b Temp table transactions
+        \- Internal materialized views and temp table usage from a session and within procedures can take advantage of greater transaction support.
+      %li
+        %b Buffering Improvements
+        %ul
+          %li Added the ability to inline memory based or small lobs.
+          %li Added tracking of the memory held by soft references and general batch overhead.  This ensures more efficient cache/memory utilization when dealing with 10s of millions or more of batches/pages.
+          %li Also switched to a concurrent LFRU algorithm that significantly reduces writes and read misses with temporary tables.
+          %li Added a memory buffer to better handle file storage as fixed blocks.  The memory buffer may optionally be configured as off-heap for better large memory performance - see the Admin Guide for more.
+          %li Serialization was improved for both internal batches and client/server batches.
+      %li
+        %b GSSAPI
+        \- both the Teiid JDBC client/server and the ODBC pg backend can now support GSSAPI for single sign-on.
+      %li
+        %b Server-side Query Timeouts
+        \- default query timeouts can be configured at both the VDB (via the query-timeout VDB property) and entire server (via the teiid-jboss-beans.xml queryTimeout property).
+      %li
+        %b Native Queries
+        \- added the ability to specify native query SQL for JDBC physical tables and stored procedures via extension metadata.  See the Reference for more.
+      %li
+        %b View removal hint
+        \- the NO_UNNEST hint now also applies to FROM clause views and subqueries.  It will instruct the planner to not perform view flattening.
+      %li
+        %b Non-blocking statement execution
+        \- Teiid JDBC extensions TeiidStatement and TeiidPreparedStatement can be used to submit queries against embedded connections with a callback to process results in a non-blocking manner.
+      %li
+        %b NON_STRICT limit hint
+        \- the NON_STRICT hint can be used with unordered limits to tell the optimizer to not inhibit push operations even if the results will not be consistent with the logical application of the limit.
+      %li
+        %b Source Hints
+        \- user and transformation queries can specify a meta source hint, e.g. SELECT /*+ sh my-oracle:'leading' */ * FROM TBL. The hint information will be passed to the translator. The Oracle translator will by default treat the source hint as an Oracle hint.  See the Reference and Developers Guide for more.
+      %li
+        %b Hive Translator
+        \- Hive translator has been added as a technology preview.
+      %li
+        %b Excel JDBC Translator
+        \- for use with Excel using the JDBC-ODBC bridge.
+%ul
+  %li
+    7.5
+    %ul
+      %li
+        %b Window function support
+        \- Teiid and pushdown support was added for SQL 2003 OLAP window functions.  The analytical ranking functions RANK, DENSE_RANK, and ROW_NUMBER were also added.  See the reference for more.
+      %li
+        %b Additional ANSI support
+        \- Teiid and pushdown support was added for SUBSTRING using FROM/FOR syntax, TRIM, EXTRACT, SIMILAR TO, and LIKE_REGEX.  See the reference for more.
+      %li
+        %b Subquery optimization control
+        \- added the DJ hint to indicate that a subquery should be the independent side of a dependent join.
+      %li
+        %b MAKEIND Hint
+        \- The MAKEIND hint can be used to indicate that the other side of the join should be made dependent.
+      %li
+        %b ODBC SSL
+        \- added support for SSL encrypted ODBC connections.
+      %li
+        %b Reauthentication Statement
+        \- SET SESSION AUTHORIZATION can now be used to perform a reauthentication via JDBC or ODBC.
+      %li
+        %b Pluggable Authorization
+        \- an alternative PolicyDecider can be defined in the teiid-jboss-beans.xml file to customize authorization decisions.
+      %li
+        %b Streaming XQuery
+        \- in situations where document projection applies if the XMLQUERY/XMLTABLE path expressions meet certain conditions, then the incoming document will not only be projected, but the independent subtrees will be processed without loading the entire document.  This allows for nearly arbitrarily large XML documents to be processed.  See the Reference for more.
+      %li
+        %b Logging Procedures
+        \- added SYSADMIN.isLoggable and SYSADMIN.logMsg to aid in debugging procedure logic.
+      %li
+        %b ANSI OFFSET/FETCH FIRST
+        \- instead of the limit clause, a standard OFFSET and/or FETCH FIRST/NEXT clause can be used to limit results.
+      %li
+        %b ODBC Cursors
+        \- added the capability to use "UseDeclareFetch" with ODBC. This enables users to read results in batches, which is especially useful when dealing with large row counts.
+      %li
+        %b Internal Materialized Views
+        %ul
+          %li
+            %b Distributed Refresh
+            \- When a internal materialized view is refreshed at one node, an event is issued to all other nodes in the cluster to asynchronously fetch the new contents.
+          %li
+            %b Sync at Start
+            \- When a node is restarted in a cluster, at end of start cycle Teiid will asynchronously fetch the cached internal materialized view contents from other nodes.
+      %li
+        %b LDAP Pagination
+        \- the ldap translator now supports pagination for retrieving large results from directory servers like Active Directory and OpenLDAP.
+%ul
+  %li
+    7.4
+    %ul
+      %li
+        %b Virtual procedure out params
+        \- virtual procedures can now have RETURN/OUT/INOUT parameters to return values.
+      %li
+        %b OLAP
+        \- OLAP translator is now part of Teiid kit using OLAP4J
+      %li
+        %b Multi-source procedures
+        \- multi-source handling was expanded to cover stored procedure execution.  See the Reference for more.
+      %li
+        %b Function Support
+        \- additional system functions were made available.
+        %ul
+          %li
+            %b uuid
+            was added to generate type 4 UUIDs and the Hibernate dialect was updated to support the GUIDGenerator.
+          %li
+            %b array_get
+            was added to extract values from java.sql.Array or java array values.
+          %li
+            %b array_length
+            was added to get the length of java.sql.Array or java array values.
+      %li
+        %b ARRAYTABLE
+        \- the ARRAYTABLE table function was added to simplify array value extraction into a tabular format.
+      %li
+        %b Ingres
+        \- Ingres database translator is now available to use as supported source under Teiid.
+      %li
+        %b Optional Join Enhancements
+        \- the optional join hint no longer requires the use of ANSI joins and can will not remove optional bridging tables that are used by two other tables that are required.
+      %li
+        %b InterSystems Cache
+        \- InterSystems Cache database translator is now available to use as supported source under Teiid.
+      %li
+        %b userRequestSourceConcurrency
+        \- was added to control the number of concurrent source queries allowed for each user request.
+      %li
+        %b Memory Management Improvements
+        \- maxReserveBatchColumns and maxProcessingBatchesColumns will be default be determined automatically and will more reliably prevent memory issues.  See the admin guide for more.
+      %li
+        %b Subquery optimization control
+        \- added the MJ and NO_UNNEST hints and the org.teiid.subqueryUnnestDefault system property to control the optimization of subqueries to traditional joins or to a merge join implementation of a semijoin or antijoin.
+      %li
+        %b Local connection threads
+        \- local connection calling threads will be used to process work rather than using an engine thread.  This helps decouple the configuration of maxThreads.
+      %li
+        %b Dependent Join Improvements
+        \- several major improvements were made to increase performance and develop better plans.
+        %ul
+          %li
+            %b Improved Planning
+            \- the decision to create a dependent join is now considered earlier in planning and is much more effective for dependent joins involving multiple unrelated independent tables.
+          %li
+            %b IN predicate splitting
+            \- the planner can now split large dependent IN predicates into multiple IN predicates, which is controlled by the translator property MaxDepdendentInPredicates.  This allows for much larger dependent joins to be performed as a single query.
+          %li
+            %b Dependent query parallelization
+            \- when multiple dependent queries are still required, then they will be run in parallel (up to MaxUserSourceRequestConcurrency), rather than sequentially.
+          %li
+            %b Cost based back-off
+            \- for cost based dependent joins if the number of independent values is too large, then the join will be performed as normal.
+      %li
+        %b Enhanced Sort Join
+        \- the partitioned merge join was replaced with an enhanced sort join.  The enhanced sort join will use the actual row counts from each side of the relation to perform a index based join if one side is small enough, a partial sort of the larger side and a repeated merge join if the tuples are unbalanced but one side is not small enough to form an index, or a standard sort merge join if the tuples are balanced.
+      %li
+        %b JDK1.5 JDBC Client JAR
+        \- A retro-translated Teiid client JDBC jar now available to use with JDK 1.5 VM. Note only the JDBC API is supported, not the Admin API, or retrieving query plans as XML.
+      %li
+        %b Security Improvements
+        \- UDF and pushdown functions can now be protected with data roles.  Also the CommandContext can provide the Subject for custom security checks in UDFs.
+      %li
+        %b Cache Invalidation
+        \- Prepared plan and result set caches have will invalidate entries based upon metadata and data changes respectively.  See the cache configuration maxStaleness setting and the Admin and Developer Guides for more.
+      %li
+        %b Runtime Updates of Metadata
+        \- ALTER statements have been added to change view/procedure/INSTEAD OF trigger (update procedure) definitions.  A CREATE TRIGGER statement is also available to add an INSTEAD OF trigger (update procedures) to views.          System procedures were added to set extension metadata and stat values.  By default all effects of metadata updates happen only on running vdbs across the cluster.  To make the changes persistent see the Developers Guide Runtime Updates section.
+  %li
+    7.3
+    %ul
+      %li
+        %b Subquery Optimization
+        \- added rewrite to INNER JOIN  for  applicable WHERE clause subqueries. Also added cost based SEMI and   ANTI-SEMI join handling for applicable non-pushed WHERE and HAVING   subqueries.
+      %li
+        %b Updatable Views
+        %ul
+          %li Added support to perform simple pass-through and more complicated updates through views by default.
+          %li Added  support for "FOR EACH ROW" update procedure  handling (similar to  INSTEAD OF triggers in other DBMS's), which should  be used instead of  the deprecated TRANSLATE criteria approach.
+      %li
+        %b Temp table enhancements
+        \- added support for the SERIAL  datatype, which is a not null INTEGER  that auto-increments, and the  ability to specify a column as NOT NULL.
+      %li
+        %b UDF
+        \- new API objects added to teiid-api to support user defined functions that are capable of pushdown to source.
+      %li
+        %b Unescape Function
+        \- a new system function, unescape,  was added to handle common \  escaping in strings including octal,  hex/unicode, \b, \r, \n, \f, and  \t.
+      %li
+        %b Predicate Optimization
+        \- expanded optimizations  for  detecting always false conditions when using IS NULL, IN, or  comparison  predicates with literal values.
+      %li
+        %b Partition-wise Optimizations
+        \- Views defined by  partitioned unions (union alls where each branch  has a projected literal  or an IN predicate that makes its values  mutually exclusive from the  other branches) can      be used in  aggregation or joins and the optimizer will take advantage  of the  partitioning information.  For example, when a partitioned union  is  joined against another partitioned union, the optimizer will  reorganize  the join of unions into a union of joins.
+      %li
+        %b Delegate Translator
+        \- A new translator base class was added that is capable of delegating all the calls to another configured translator.
+      %li
+        %b JDBC Reauthentication
+        \- Teiid connections (defined by  the org.teiid.jdbc.TeiidConnection  interface) now support the changeUser  method to reauthenticate a given  connection.
+      %li
+        %b Lob Caching
+        \- Lobs are allowed to cache to disk as part of ResultSet caching. Distributed lob caching is not allowed.
+  %li
+    %strong 7.2
+    %ul
+      %li
+        %b SQL Support
+        %ul
+          %li
+            %b Non-Recursive Common Table Expressions
+            \- The WITH clause (and associated pushdown) for non-recursive queries is now supported.
+          %li
+            %b Explicit Table Syntax
+            \- TABLE x can now be used as a shortcut for SELECT * FROM x
+      %li
+        %b JSON Support
+        \- JSON, which could be obtained through  the ws-translator using http calls or other methods, can be converted to  XML using the system function jsonToXml.  XMLTABLE and other  integration logic can then be used on the JSON results.
+      %li
+        %b Transaction Statements
+        \- JDBC/ODBC now accepts START TRANSACTION, COMMIT, and ROLLBACK statements to control local transactions.
+      %li
+        %b Procedure Result Caching
+        \- virtual procedure definitions may use a cache hint to cache results in the result set cache.
+      %li
+        %b Improved Plan Caching
+        \- plans used by internal  materialization and stored procedure plans will be automatically cached  in the prepared plan cache.  Improvements were also made to reduce the  memory footprint of the plans.
+      %li
+        %b Refined Load Balancing and Fail Over
+        \- clients can  use use the statement "SET NEWINSTANCE TRUE" to allow their connection  to select a new server instance.  See the Client Developer's Guide for  more information.
+      %li
+        %b Simplified Role Usage
+        \- a role can now be assigned to any authenticated user via the any-authenticated attribute on the data-role element.
+      %li
+        %b Materialized View Performance
+        \- materialized view  tables will now automatically create and use non-unique secondary  indexes for unique constraints and indexes defined on the view.
+      %li
+        %b Binary Web Service Calls
+        \- the ws translator now  provides an invokeHttp procedure to return the blob contents and string  content type of an http/https call.
+      %li
+        %b Improved clustering support
+        \- see the Admin Guide chapter on clustering.
+      %li
+        %b IPv6 support
+        \- Teiid can started using IPv6 bind address and can be used with JDBC connection.
+      %li
+        %b SESSION_ID
+        \- A new system function "SESSION_ID" is added to the system function library.
+      %li
+        %b Assignment Syntax Improvements
+        \- Teiid's procedure  syntax for assignments was clarified so that the assignment value must  be a proper expression.  INSERT/UPDATE/DELETE update counts must be  obtained from VARIABLES.ROWCOUNT, scalar values must be obtained via a  scalar subquery. The parser will continue to accept the old syntax and  convert the query into the proper form.
+      %li
+        %b TEXTAGG
+        \- SQL support for Text aggregation. Using  this function expression values can be aggregated into a CSV BLOB with  configurable delimiter, header, and encoding.  The result can be  optionally saved to a text file.
+  %li
+    %strong 7.1
+    %ul
+      %li
+        %b ODBC Support
+        \- Support for ODBC access is now available  through PostgreSQL ODBC driver clients.  See the Client Developer's  Guide for more on how     to use Teiid's ODBC access.
+      %li
+        %b Native Materialized Tables
+        \- views marked as materialized without a target table will be materialized internally by Teiid.  Materialized view tables will      be indexed by the primary key of the view if present and can be controlled through the expanded cache hint.       There are also new system procedures refreshMatView and refreshMatViewRow to refresh internal materialized view contents.
+      %li
+        %b Expanded Cache Hint
+        \- The cache hint can now specify  pref_mem to indicate that data should prefer to be held in memory, ttl  to indicate the time-to-live,      and updatable to indicate that a materialized view with a primary  key can be updated by row with the refreshMatViewRow system procedure.
+      %li
+        %b SQL Support
+        %ul
+          %li Added NULLS FIST/LAST handling - including pushdown support.
+          %li Added enhanced numeric stat aggregate functions  STDDEV_POP, STDDEV_SAMP, VAR_POP, VAR_SAMP, with pushdown and aggregate  decomposition.
+          %li Added support for the boolean aggregate functions ANY, SOME, EVERY.
+          %li Added support for using boolean value expression as  both criteria and expressions, e.g. "... where boolean_value" or "select  x = 1 as boolean_value ...".
+          %li Changed named procedure syntax to accept param=>value, rather than param=value.
+          %li Added PRIMARY KEY and the associated index support to temp tables.
+      %li
+        %b Parallel Source Queries
+        \- reestablished parallel  execution of source queries within a query plan along with a prioritized  work system to help prevent resource contention.
+      %li
+        %b Improved Insert Support
+        \- Cross source inserts using  a query expression can defer to the source to perform the entire insert  atomically with source controlled batching.       See maxPreparedInsertBatchSize on any JDBC translator supporting the  InsertWithIterator capability.
+      %li
+        %b SHOW Statement
+        \- added client handling for the SHOW statement to retrieve query plan information and see parameter values.
+      %li
+        %b User Identity
+        \- Teiid DataSources in JBossAS  connecting to a local Teiid instance can preserve the thread's user  identity, rather than requiring     a new authentication.  See  TeiidDataSource.setPassthroughAuthentication.
+      %li
+        %b VDB Versioning
+        \- The VDB version may be determined  by the deployed file name.  The expected pattern is <VDB  Name>.<Version>.vdb.  See the Admin Guide      for more on how to use VDB versioning.
+  %li
+    %strong 7.0
+    %ul
+      %li
+        %b JBoss AS Integration
+        \- Teiid now requires a
+        %a{href: "http://www.jboss.org/jbossas/downloads.html"} JBoss AS 5.1
+        instance.    This change allows Teiid to leverage many AS/MC features, including  transaction management, JCA, hot file drop VDB deployment, and the  profile service for configuration.
+      %li
+        %b New Admin Console
+        \- This     release includes a preview release of our new administration    console. See it's
+        = succeed "." do
+          %a{href: "http://community.jboss.org/wiki/TeiidPluginforMonitoringandConfigurationusingEmbeddedJopr"} feature     overview
+      %li
+        %b Translators and JCA components
+        \- This release separates the old connector API into light-weight   Translators and JCA components. This greatly simplifies the process     of adding new integration sources to Teiid, since it cleanly separates  container provided functionality (JCA) from the Teiid specific      classes knwon as a Translator.  See the
+        %a Developer's Guide
+        for more information.
+      %li
+        %b Text Integration
+        \- Structured text file processing is   now handled by the TEXTTABLE table function and the .
+      %li
+        %b SQL/XML
+        \- Nearly all of SQL/XML 2003 support has been  added, as well as XMLTABLE and XMLQUERY from SQL/XML 2006.
+      %li
+        %b Web Services Integration
+        \- XML/Relational logic has     been replaced by the SQL/XML XMLTABLE and web services execution is     now done through the WS Translator/WS Resource Adapter.
+      %li
+        %b Expanded Dynamic VDB Support
+        \- Every source type    except for LDAP can now be integrated in a Dynamic VDB.
+      %li
+        %b Other SQL Support
+        \- Queries can now contain nested tables    that allow for correlated variables to preceding from clause items.  Expressions are supported in the order by clause.      Double quoted identifiers are allowed by default.  Added the functions to_bytes, to_chars, and querystring.     ResultSet caching can now be utilized with the /* cache */ query hint.
+      %li
+        %b Improved Buffering
+        \- Forward only cursors will typically not buffer results on the server.  Algorithms for    storing and retrieving buffers have also been improved.
+  %li
+    %strong 6.2
+    \- Offers the integration server with features compatible with the MetaMatrix 5.5 line.  It simplifies installation and adds the AdminShell kit.  Select connectors can also supply metadata directly to "dynamic vdbs" for integration without the Designer.
+  %li
+    %strong 6.1
+    \- Focused on performance and usability.  Adds additional Connector API features include push down support for inserts with query expressions, more granular push down, and direct to source bulk update and delete operations. Processing improvements for imbalanced joins, removal of subquery usage restrictions, and better planning of sort based operations.  Provides better embedded usage in JBossAS.
+  %li
+    %strong 6.0
+    \- Initial open source release.  Improvements and simplifications over the MetaMatrix 5.5 line include integrated JBossCache, greater scalability, EXCEPT/INTERSECT set operations, smaller processing plans, JRE 1.6 support, additional system functions, enhanced connector API, and expanded use of symmetric encryption.

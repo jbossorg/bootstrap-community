@@ -1,11 +1,11 @@
 # Default page title
-title: JBoss Community
+title: Teiid
 
 # Project id name
-project: example
+project: teiid
 
 # Project full name
-project_name: Example
+project_name: Teiid
 
 # Default minify settings
 css_minifier: disabled
@@ -13,29 +13,29 @@ js_minifier: disabled
 html_minifier: disabled
 
 # Merge multiple JavaScript files to improve performance
-fileMerger:
-  enabled: true
-  outputFilePath: /javascripts/bootstrap-community.js
-  paths:
-    - /javascripts/_bootstrap-transition.js
-    - /javascripts/_bootstrap-alert.js
-    - /javascripts/_bootstrap-button.js
-    - /javascripts/_bootstrap-carousel.js
-    - /javascripts/_bootstrap-collapse.js
-    - /javascripts/_bootstrap-dropdown.js
-    - /javascripts/_bootstrap-modal.js
-    - /javascripts/_bootstrap-tooltip.js
-    - /javascripts/_bootstrap-popover.js
-    - /javascripts/_bootstrap-scrollspy.js
-    - /javascripts/_bootstrap-tab.js
-    - /javascripts/_bootstrap-typeahead.js
-    - /javascripts/_bootstrap-affix.js
-    - /javascripts/_jbossorg-navbarfix.js
-    - /javascripts/_jbossorg-FeedEk.js
-    - /javascripts/_jbossorg-jiraWidget.js
-    - /javascripts/_jquery-easytabs.js
-    - /javascripts/_crisp-scripts.js
-    - /javascripts/_jbossorg-tabzilla.js
+# fileMerger:
+#   enabled: true
+#   outputFilePath: /javascripts/bootstrap-community.js
+#   paths:
+#     - /javascripts/_bootstrap-transition.js
+#     - /javascripts/_bootstrap-alert.js
+#     - /javascripts/_bootstrap-button.js
+#     - /javascripts/_bootstrap-carousel.js
+#     - /javascripts/_bootstrap-collapse.js
+#     - /javascripts/_bootstrap-dropdown.js
+#     - /javascripts/_bootstrap-modal.js
+#     - /javascripts/_bootstrap-tooltip.js
+#     - /javascripts/_bootstrap-popover.js
+#     - /javascripts/_bootstrap-scrollspy.js
+#     - /javascripts/_bootstrap-tab.js
+#     - /javascripts/_bootstrap-typeahead.js
+#     - /javascripts/_bootstrap-affix.js
+#     - /javascripts/_jbossorg-navbarfix.js
+#     - /javascripts/_jbossorg-FeedEk.js
+#     - /javascripts/_jbossorg-jiraWidget.js
+#     - /javascripts/_jquery-easytabs.js
+#     - /javascripts/_crisp-scripts.js
+#     - /javascripts/_jbossorg-tabzilla.js
 
 # Cache hosted fonts, images and javascript
 wget:
@@ -60,17 +60,21 @@ wget:
     - http://static.jboss.org/theme/fonts/titilliumtext/
     - http://static.jboss.org/theme/fonts/font-awesome/
     - http://static.jboss.org/theme/images/common/
-    - http://static.jboss.org/example/
+    - http://static.jboss.org/teiid/
 
 # Update resource URLs based on the profile
 profiles:
   development:
-    jborg_fonts_url: /cache/static.jboss.org/theme/fonts
-    jborg_images_url: /cache/static.jboss.org/theme/images
-    jborg_js_url: /cache/static.jboss.org/theme/js
-    project_images_url: /cache/static.jboss.org/example/images
-    bootstrap_css_url: /stylesheets-source/_bootstrap-community
-    bootstrap_js_url: /javascripts/bootstrap-community
+    jborg_fonts_url: http://static.jboss.org/theme/fonts
+    jborg_images_url: http://static.jboss.org/theme/images
+    jborg_js_url: http://static.jboss.org/theme/js
+    project_images_url: http://static.jboss.org/teiid/images
+    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.4/bootstrap-community
+    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.4/bootstrap-community
+    wget:
+      enabled: false
+    fileMerger:
+      enabled: false
     symlinker:
       from: ../stylesheets
       to: ./_site/stylesheets-source
@@ -78,11 +82,13 @@ profiles:
     jborg_fonts_url: http://static.jboss.org/theme/fonts
     jborg_images_url: http://static.jboss.org/theme/images
     jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
+    project_images_url: http://static.jboss.org/teiid/images
     bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.4/bootstrap-community
     bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.4/bootstrap-community
-    base_url: http://example-stg.jboss.org
+    base_url: http://teiid-stg.jboss.org
     wget:
+      enabled: false
+    fileMerger:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
     # google_analytics: UA-00000000-0
@@ -94,11 +100,13 @@ profiles:
     jborg_fonts_url: http://static.jboss.org/theme/fonts
     jborg_images_url: http://static.jboss.org/theme/images
     jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
+    project_images_url: http://static.jboss.org/teiid/images
     bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.4/bootstrap-community
     bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.4/bootstrap-community
-    base_url: http://example.jboss.org
+    base_url: http://teiid.jboss.org
     wget:
+      enabled: false
+    fileMerger:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
     # google_analytics: UA-00000000-0

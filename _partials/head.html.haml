@@ -5,11 +5,7 @@
 %meta(name="author" content="#{page.author}")
 
 - pageStyle = page.style ;
-
-- if site.profile.eql?("staging") or site.profile.eql?("production")
-  %link(href="#{pageStyle ? site[pageStyle].bootstrap_css_url : site.bootstrap_css_url}#{site.minified}.css" rel="stylesheet" media="screen")
-- else
-  %link(rel="stylesheet/less" type="text/css" href="#{pageStyle ? site[pageStyle].bootstrap_css_url : site.bootstrap_css_url}#{site.minified}.less")
+%link(href="#{pageStyle ? site[pageStyle].bootstrap_css_url : site.bootstrap_css_url}#{site.minified}.css" rel="stylesheet" media="screen")
 
 
 / IE 6-8 support of HTML 5 elements
@@ -18,7 +14,7 @@
 
 / Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org.
 
-%link(rel="shortcut icon" href="#{site.project_images_url}/favicon.ico")
+%link(rel="shortcut icon" href="#{site.project_images_url}/teiid_icon_16x.png")
 %link(rel="apple-touch-icon-precomposed" sizes="144x144" href="#{site.project_images_url}/apple-touch-icon-144x144-precomposed.png")
 %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="#{site.project_images_url}/apple-touch-icon-114x114-precomposed.png")
 %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="#{site.project_images_url}/apple-touch-icon-72x72-precomposed.png")

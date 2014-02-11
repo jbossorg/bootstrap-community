@@ -1,108 +1,91 @@
 .div
-  %h2 Quickstarts
+  %h2 Useful links
   %ul.nav.nav-list
-    %li.active
-      %a{:href => "#"}
-        %i.icon-fixed-width.icon-download
-        Download
     %li
-      %a{:href => "#"}
-        %i.icon-fixed-width.icon-dashboard
-        Features
+      %a{:href => "#{site.base_url}/about.html"}
+        %i.icon-fixed-width.icon-book
+        About Teiid
     %li
-      %a{:href => "#"}
-        %i.icon-fixed-width.icon-group
-        Project Team
-    %li
-      %a{:href => "#"}
-        %i.icon-fixed-width.icon-envelope-alt
-        Mailing Lists
-    %li
-      %a{:href => "#"}
+      %a{:href => "#{site.base_url}/basics.html"}
         %i.icon-fixed-width.icon-edit
-        Wiki
+        The Basics
     %li
-      %a{:href => "#"}
+      %a{:href => "#{site.base_url}/quickstart.html"}
+        %i.icon-fixed-width.icon-dashboard
+        Quick Start
+    %li
+      %a{:href => "#{site.base_url}/tools.html"}
+        %i.icon-fixed-width.icon-cogs
+        Tools
+    %li
+      %a{:href => "#{site.base_url}/downloads.html"}
+        %i.icon-fixed-width.icon-download
+        Downloads
+    %li
+      %a{:href => "#{site.base_url}/sourcecode.html"}
         %i.icon-fixed-width.icon-sitemap
-        Source Overview
+        Source Code
     %li
-      %a{:href => "#"}
+      %a{:href => "#{site.base_url}/roadmap.html"}
         %i.icon-fixed-width.icon-road
-        Building the Project
+        Roadmap
+%br
+
+%div{style: "float: left; padding-right: 20px; padding-bottom: 20px; "}
+  %a{href: "http://www.redhat.com/promo/integrated_enterprise/control/?sc_cid=701600000006UkyAAE "}
+    %img{alt: "Control your business in real-time with automated decision making", height: "250", src: "#{site.project_images_url}/JB_Integration_Week_developers1_banner_250x250_10108197_1012_dc.png", style: "margin:0 auto;", width: "250"}/
+
+%table
+  %tbody
+    %tr
+      %td
+        %a{href: "http://www.jboss.com/products/platforms/dataservices/"}
+          %img{alt: "Looking for a fully supported, certified Data Services Platform?", height: "75", src: "#{site.project_images_url}/projectimage_projecttoproduct_dsp.png", style: "margin:0 auto;", width: "244"}/
+
 %br
 
 .well
   #badges
     %ul
-      %li.license-asl
+      %li.license-lgpl
         %a{:href => "http://www.apache.org/licenses/LICENSE-2.0"}
           %em Apache License, Version 2.0
-      %li.jsr
-        %a{:href => "http://jcp.org/en/jsr/detail?id=34"}
-          %span.implements JSR
-          %span.version 34
-      %li.tools
-        %a{:href => "http://www.jboss.org/tools"} Supported by Tools
       %li.jopr
         %a{:href => "http://www.jboss.org/jopr"} Managed by RHQ
       %li.arquillian
-        %a{:href => "http://www.jboss.org/arquillian"} Tested with Arquillian
     %div{:style => "clear: both; height:1px;"}
-
-.div
-  %h3 Supported In:
-  %ul.supportedin
-    %li
-      %i.icon-fixed-width.icon-plus
-      %a{:href => "#"}
-        Application Platform
-    %li
-      %i.icon-fixed-width.icon-plus
-      %a{:href => "#"}
-        Communications Platform
-    %li
-      %i.icon-fixed-width.icon-plus
-      %a{:href => "#"}
-        Portal Platform
-    %li
-      %i.icon-fixed-width.icon-plus
-      %a{:href => "#"}
-        JBoss Hibernate
 
 
 %div#coolstuff
   %p{:style => "margin-top: 2px; margin-bottom: 15px; margin-right: 10px; text-align: right;"}
-    %a{:href => "/coolstuff/desktopwallpapers/project"}> Desktop Wallpaper
+    %a{:href => "http://www.jboss.org/coolstuff/desktopwallpapers/teiid.html"}> Desktop Wallpaper
     &nbsp;|&nbsp;
-    %a{:href => "#"} Project Swag
-  %a{:href => "/coolstuff/desktopwallpapers/project"}
-    %img{:alt => "Cool Stuff", :height => "110", :src => "http://static.jboss.org/images/infinispan/project_coolstuff_infinispan.png", :style => "margin:0 auto;", :width => "225"}/
+    %a{:href => "http://www.cafepress.com/jbossorg/7028353"} Project Swag
+  %a{:href => "http://www.jboss.org/coolstuff/desktopwallpapers/project"}
+    %img{:alt => "Cool Stuff", :height => "110", :src => "#{site.project_images_url}/project_coolstuff_teiid.png", :style => "margin:0 auto;", :width => "225"}/
 
+.well
+  %i.icon-quote-left.icon-4x.pull-left
+  Teiid will become the basis for all future products, which will be our Enterprise Data Services Platform.
+  %br
+  %strong
+    %a{href: "http://andrigjboss.blogspot.com/2009/02/jboss-division-of-red-hat-gives-birth.html"} Andy Miller
+    11 Feb 09
 
-.well.sponsors
-  %h3 Sponsors
-  %ul
-    %li
-      %a{:href => "http://www.ej-technologies.com/"}
-        %img{:alt => "EJ-Technologies", :src => "http://static.jboss.org/common/images/sponsors/ejtechnologies-color.png"}/
-      %p EJ-Technologies has kindly provided free JProfiler licenses.
-    %li
-      %a{:href => "http://www.nexb.com/"}
-        %img{:alt => "NexB", :src => "http://static.jboss.org/common/images/sponsors/nexb-color.png"}/
-      %p nexB is our preferred Eclipse development partner.
-    %li
-      %a{:href => "http://www.jetbrains.com/"}
-        %img{:alt => "JetBrians", :src => "http://static.jboss.org/common/images/sponsors/intellij-color.png"}/
-      %p JetBrains has kindly donated an open source IntelliJ license.
-    %li
-      %a{:href => "http://www.headwaysoftware.com/products/structure101/index.php"}
-        %img{:alt => "Structure 101", :src => "http://static.jboss.org/common/images/sponsors/structure101-color.png"}/
-      %p Structure 101 helps us to understand our project structure.
-    %li
-      %a{:href => "http://www.magicdraw.com/"}
-        %img{:alt => "MagicDraw", :src => "http://static.jboss.org/common/images/sponsors/magicdraw-color.png"}/
-      %p A Special thanks to MagicDraw for supporting the project.
-
+.well
+  %dl
+    %dt tei·id  (TEE-id)
+    %br/
+    %dd
+      %b adj.
+         
+      %em pertaining to a family of tropical American whip-tailed lizards noted for speed and agility.
+    %dd
+      %b n.
+         
+      %em a set of open source enterprise information integration tools noted for their ability to rapidly create data services that can quickly adapt to changes in your IT environment.
+    %dd
+      %dl
 
 %div
   %a{:href => "http://www.jboss.org/security.html"}/

@@ -1,0 +1,410 @@
+---
+layout: project
+title: Feature Matrix
+---
+
+%h2 Feature Matrix
+%ul.icons-ul
+  %li
+    %i.icon-li.icon-play-sign
+    %a{href: "#Features"} Features/Capabilities by Product
+  %li
+    %i.icon-li.icon-play-sign
+    %a{href: "#Configs"} Supported Platforms and Data Sources
+  %li
+    %i.icon-li.icon-play-sign
+    %a{href: "#Standards"} Standards supported by Teiid
+.clear
+  %br/
+%p
+  %meta{content: "text/html; charset=utf-8", "http-equiv" => "CONTENT-TYPE"}/
+  %meta{content: "OpenOffice.org 2.3  (Linux)", name: "GENERATOR"}/
+  :css
+    <!--        @page { size: 8.5in 11in; margin: 0.79in }      TD P { margin-bottom: 0in }         TH P { margin-bottom: 0in }         P { margin-bottom: 0.08in }     -->
+%h4 Feature/capabilities by product
+%table.table.table-bordered.table-striped{border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %colgroup
+    %col{width: "335"}/
+    %col{width: "86"}/
+    %col{width: "78"}/
+    %col{width: "147"}/
+  %thead
+    %tr
+      %th{width: "335"} Feature/Capability
+      %th{width: "86"} Teiid Embedded
+      %th{width: "78"} Teiid Server + Designer
+      %th{width: "147"} JBoss Enterprise Data Services Platform
+  %tbody
+    %tr.oddRow{valign: "top"}
+      %td
+        Teiid query processing
+        %ul
+          %li Retrieve data from multiple sources with single query
+          %li Consolidated results that span multiple sources
+      %td Yes
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td
+        Optimized query planning and processing:
+        %ul
+          %li Planner designed for federating heterogeneous data
+          %li Planner uses source metadata for efficient processing
+          %li Can push processing (joins, scalar functions, subqueries) to data sources to leverage source capabilities
+          %li Uses knowledge of source native capabilities
+          %li Accounts for cardinalities of source tables/objects being accessed.
+          %li Supports user-defined hints to override default planning behavior
+          %li Dynamically chooses from a variety of join algorithms during planning
+          %li Integrated buffer management for flowing results through system
+          %li Supports cursors for all data sources even when data consolidated from many sources.
+      %td Yes
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td Support for a wide range of enterprise data sources
+      %td
+        %a{href: "#Configs"} Data Sources
+      %td
+        %a{href: "#Configs"} Data Sources
+      %td
+        %a{href: "#Configs"} Data Sources
+    %tr.evenRow{valign: "top"}
+      %td SQL access to SQL-based and non-SQL-based data sources
+      %td Yes
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td
+        SQL/Query capabilities:
+        %ul
+          %li Majority support for SQL-92, partial support for SQL-98
+          %li Supports use of SQL operations for all sources regardless of native support
+          %li Supports use of prepared statements
+          %li Supports execution of stored procedures
+          %li Supports scalar functions and user-defined functions in query commands
+      %td Yes
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td
+        JDBC access to data across multiple sources
+        %br/
+        JDBC access to runtime metadata describing sources
+      %td Yes (no remote access)
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td
+        ODBC access to data across multiple sources
+        %br/
+        ODBC access to runtime metadata describing sources
+      %td No
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td
+        SOAP access (HTTP or JMS) to data across multiple sources
+        %br/
+        SOAP access (HTTP or JMS) to runtime metadata describing sources
+      %td No
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td Logging of all queries and commands processed
+      %td  *
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td Distributed transactions and updates
+      %td  *
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td Caching of results sets for user queries and individual data source queries
+      %td  *
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td Support for materialized views (staging of pre-transformed information in a separate database for rapid access)
+      %td  *
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td Caching of lookup tables
+      %td Yes
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td Information abstraction
+      %td Yes
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td Schema-based XML from non-XML sources
+      %td  
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td Exposure of information as Web services
+      %td  
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td Extensible architecture
+      %td Yes
+      %td Yes
+      %td Yes
+    %tr.evenRow{valign: "top"}
+      %td
+        Extensible data source connectivity
+        %ul
+          %li Data sources accessed through connectors
+          %li Numerous connectors included
+          %li Supports development of custom connectors
+          %li Well-defined API for developing and integrating new connectors including support for connection pooling; access to transaction management system, runtime metadata, security context and logging system).
+      %td Yes (sources may require manual configuration)
+      %td Yes
+      %td Yes
+    %tr.oddRow{valign: "top"}
+      %td Support
+      %td Community
+      %td Community
+      %td Community and Red Hat
+%p  * features are possible in Embedded, but require additional integration/configuration.
+.clear
+  %br/
+%h4 Supported platforms and data sources
+%p Table of source versions and other stuff here
+.clear
+  %br/
+%h4 Standards Supported by Teiid
+%p
+  %meta{content: "text/html; charset=utf-8", "http-equiv" => "CONTENT-TYPE"}/
+  %meta{content: "OpenOffice.org 2.3  (Linux)", name: "GENERATOR"}/
+%p Teiid project components use many standards, and expose information based on standards.
+.clear
+  %br/
+%h4 Data Access Standards
+%table.table.table-bordered.table-striped{border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %thead
+    %tr
+      %th{width: "130"} Standard
+      %th{width: "104"} Version
+      %th{width: "139"} Standards Body
+      %th Notes
+  %tbody
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#S"} SQL
+      %td SQL-92
+      %td
+        %a{href: "http://www.itl.nist.gov/div897/ctg/dm/sql_info.html", target: "_blank"} ANSI, ISO
+      %td
+        Primary query language used for data access through Teiid and for defining
+        %a{href: "#{site.base_url}/basics/glossary.html#transformation"} transformations
+        in Teiid Designer.
+    %tr.evenRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#J"} JDBC
+      %td 3.0
+      %td
+        %a{href: "http://java.sun.com/", target: "_blank"} Sun
+      %td
+        The primary
+        %a{href: "#{site.base_url}/basics/glossary.html#api"} API
+        for accessing Teiid and the Teiid Server. In addition, JDBC-accessible sources can be imported into Teiid Designer and integrated as
+        %a{href: "#{site.base_url}/basics/glossary.html#datasource"} data             sources
+        into Teiid, using one of the many JDBC connectors           provided.
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#O"} ODBC
+      %td 3.5
+      %td Microsoft
+      %td  
+    %tr.evenRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#X"} XA
+      %td 3.5
+      %td
+        %a{href: "http://www.opengroup.org/", target: "_blank"} The Open Group
+      %td Defines the semantics for two-phase commits in distributed transactions. Used by Teiid.
+.clear
+  %br/
+%h4 Modeling Standards
+%table.table.table-bordered.table-striped{border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %thead
+    %tr
+      %th{width: "130"} Standard
+      %th{width: "104"} Version
+      %th{width: "139"} Standards Body
+      %th Notes
+  %tbody
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#U"} UML
+      %td 2.0
+      %td
+        %a{href: "http://www.omg.org/technology/documents/formal/uml.htm", target: "_blank"} OMG
+      %td
+        Used in Teiid Designer for
+        %a{href: "#{site.base_url}/basics/glossary.html#model"} model
+        diagrams.
+    %tr.evenRow{valign: "top"}
+      %td EMF
+      %td 2.1
+      %td
+        %a{href: "http://www.eclipse.org/emf/", target: "_blank"} Eclipse
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#eclipse"} Eclipse
+        framework used to define and manipulate MOF-based
+        = succeed "." do
+          %a{href: "#{site.base_url}/basics/glossary.html#model"} models
+    %tr.oddRow{valign: "top"}
+      %td MOF
+      %td 1.4
+      %td
+        %a{href: "http://www.omg.org/technology/documents/formal/mof.htm", target: "_blank"} OMG
+      %td.rowline{width: "234"} Used to represent model classes and model types.
+    %tr.evenRow{valign: "top"}
+      %td XMI
+      %td 2.0
+      %td
+        %a{href: "http://www.omg.org/technology/documents/formal/xmi.htm", target: "_blank"} XMI
+      %td.rowline{width: "234"}
+        Teiid
+        %a{href: "#{site.base_url}/basics/glossary.html#model"} models
+        are stored in XMI files.
+%h4 XML Standards
+%table.table.table-bordered.table-striped{border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %thead
+    %tr
+      %th{width: "141"} Standard
+      %th{width: "113"} Version
+      %th{width: "150"} Standards Body
+      %th Notes
+  %tbody
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#X"} XML
+      %td 1.0
+      %td
+        %a{href: "http://www.w3.org/TR/REC-xml/", target: "_blank"} W3C
+      %td
+        Used to define hierarchical
+        %a{href: "#{site.base_url}/basics/glossary.html#view", target: "_blank"} views
+        in Teiid Designer, which can be executed in Teiid and Teiid Server.
+    %tr.evenRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#X"} XML           Schema
+      %td 1.0
+      %td
+        %a{href: "http://www.w3.org/TR/xmlschema-0/", target: "_blank"} W3C
+      %td Used to define hierarchical views in Teiid Designer.
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#X"} XSLT
+      %td 2.0
+      %td
+        %a{href: "http://www.w3c.org/", target: "_blank"} W3C
+      %td A style sheet can be applied to ad-hoc requests executed against XML Views through the Teiid Server
+    %tr.evenRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#X"} XPath
+      %td 2.0
+      %td
+        %a{href: "http://www.w3c.org/", target: "_blank"} W3C
+      %td Used to define Web services in Teiid Designer
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#X"} XQuery
+      %td 1.0
+      %td
+        %a{href: "http://www.w3c.org/", target: "_blank"} W3C
+      %td XML Views can be queried using XQuery through JDBC or ODBC APIs
+%h4 Web Services Standards
+%table.table.table-bordered.table-striped{border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %thead
+    %tr
+      %th{width: "125"} Standard
+      %th{width: "101"} Version
+      %th{width: "157"} Standards Body
+      %th Notes
+  %tbody
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#S"} SOAP
+      %td 1.1
+      %td
+        %a{href: "http://www.w3.org/TR/soap12-part1/", target: "_blank"} W3C
+      %td Web services deployed in Teiid are accessible via standard SOAP, over HTTP and JMS.
+    %tr.evenRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#W"} WSDL
+      %td 1.1
+      %td
+        %a{href: "http://www.w3.org/TR/wsdl", target: "_blank"} W3C
+      %td Teiid Web services are described using standard WSDL.
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#U"} UDDI
+      %td 3.0
+      %td
+        %a{href: "http://uddi.org/pubs/uddi_v3.htm", target: "_blank"} OASIS
+      %td Teiid Web services can be deployed to UDDI registries.
+    %tr.evenRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#W"} WS-I
+      %td 1.1
+      %td
+        %a{href: "http://www.ws-i.org/", target: "_blank"} WS-I Organization
+      %td Ensures interoperability of Teiid Web services with tools and products from other organizations.
+%h4 Java Standards
+%table.table.table-bordered.table-striped{border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %thead
+    %tr
+      %th{width: "140"} Standard
+      %th{width: "112"} Version
+      %th{width: "149"} Standards Body
+      %th Notes
+  %tbody
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#J"} JDBC
+      %td 3.0
+      %td
+        %a{href: "http://java.sun.com/", target: "_blank"} Sun
+      %td API to Teiid and Teiid Server. JDBC connectivity to data sources is also supported, as is importing of metadata information from JDBC sources to define a VDB.
+    %tr.evenRow{valign: "top"}
+      %td J2EE
+      %td 1.4
+      %td
+        %a{href: "http://java.sun.com/j2ee/1.4/index.jsp", target: "_blank"} Sun
+      %td Various J2EE standards used, such as JTA.
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#E"} Eclipse
+      %td 3.4.1
+      %td
+        %a{href: "http://eclipse.org/", target: "_blank"} Eclipse
+      %td The application framework upon which Teiid Designer is built.
+%h4 Protocols
+%table.table.table-bordered.table-striped{border: "0", cellpadding: "0", cellspacing: "1", width: "100%"}
+  %thead
+    %tr
+      %th{width: "129"} Protocol
+      %th{width: "113"} Version
+      %th{width: "151"} Standards Body
+      %th Notes
+  %tbody
+    %tr.oddRow{valign: "top"}
+      %td
+        %a{href: "#{site.base_url}/basics/glossary.html#S"} SSL
+      %td 3.0
+      %td Netscape
+      %td Secure connections.
+    %tr.evenRow{valign: "top"}
+      %td HTTP
+      %td 1.1
+      %td
+        %a{href: "http://www.w3.org/Protocols/", target: "_blank"} W3C
+      %td SOAP connectivity.

@@ -1,0 +1,65 @@
+---
+layout: rightcol
+title: User Scenarios
+---
+
+%h2 User Scenarios
+.clear
+  %br/
+%h3 Teiid User Scenarios
+%p Teiid can be used by different people in a variety of scenarios. This page describes some of the most common scenarios for users of Teiid.
+.clear
+  %br/
+%h4 J2EE Developer
+%p The typical Java J2EE developer is expected to have a moderate level of experience with Java, JDBC, one or more databases, and SQL, and a fair amount of experience specific to their current application server (assumed to be Weblogic, Websphere, or JBoss).
+%p The J2EE Developer uses some form of IDE (JBDS, WSAD, Eclipse, NetBeans, IDEA) the majority of the time while building and testing their applications and is fairly dependent on the setup of that environment. The development machine is likely to be Windows or Linux with deployment occurring on Solaris, Linux, or Windows.
+%p J2EE Developers already have the ability to manage and retrieve data from multiple JDBC sources via multiple JDBC connection pools. Teiid is useful in that it allows the J2EE Developer to query over those data sources in tandem without writing custom data access code. J2EE Developers expect Teiid to integrate smoothly into their application server and operate as a JDBC driver with minimal fuss and configuration.
+%p Being able to use existing JDBC connection pools in the application server rather than manage new connections would be desirable as the system administrators can only see what appears via the application server administration tools.
+.well
+  The J2EE Developer priorities are:
+  %ul
+    %li Seamless integration into the app server
+    %li Ability to query over multiple databases with one query
+    %li Simplicity and minimal configuration
+.clear
+  %br/
+%h4 Java Developer
+%p The Java Developer is similar to the J2EE Developer, but are working either partially or completely outside a J2EE environment. The most common frameworks of use are likely Spring and Hibernate.
+%p The Java Developer uses an IDE the majority of the time but may not be quite as dependent on it as the J2EE Developer. The development machine is likely to be Windows or Linux with deployment occurring on Solaris, Linux, or Windows.
+%p The Java Developer is likely to have a higher degree of Java proficiency and more detailed knowledge of JDBC than the J2EE Developer, as the J2EE Developer is often abstracted from JDBC by the app server container. However, they may themselves be dependent to some degree on a framework such as Spring or Hibernate.
+%p Java Developers want to integrate multiple sources and may find abstraction also somewhat compelling depending on the project. Like the J2EE Developer, the ability to query against multiple data sources in a single SQL statement can potentially be a huge benefit in designing their application and getting it working quickly.
+%p The Java Developer can use custom JDBC APIs or other Teiid features more easily as there is no application server in the way, thus they may try a broader range of features.
+.clear
+  %br/
+%h4 Experienced Architect
+%p
+  The Experienced Architect is often evaluating products for use in one or more projects. The desired product may actually be
+  %span.product JBoss Enterprise Data Services Platform
+  in this case but the architect is trying out Teiid because it is available for download from the web. In any case, their goal is to test out what Teiid has to offer and the focus is on rapid data integration, not on interoperability with a particular existing framework or application.
+.well
+  Experienced Architects value:
+  %ul
+    %li Ease of installation and short time to results
+    %li Well organized documentation
+    %li Performance
+.clear
+  %br/
+%h4 Admin Developer
+%p The Admin Developer is involved in integrating Teiid into an existing application using a programmtic API.  They are focused on how to automate Teiid-related activities necessary to the project such as metadata import and assembly, deployment, and administration.
+.well
+  Admin Developers value:
+  %ul
+    %li A clean, well-defined API
+    %li Descriptive error logging
+    %li Thorough documentation in the form of JavaDocs
+.clear
+  %br/
+%h4 Tool Smith
+%p The Tool Smith is involved in integrating Teiid  into an existing application or process.  They are focused on how to automate Teiid -related activities necessary to the project such as metadata import and assembly, deployment, and administration.
+%p The Tool Smith is likely an expert at one or more flavors of Linux/Unix and less familiar with Java, other than from an invocation point of view. Tool Smiths are likely to be highly proficient in Ant, Perl, shell scripting languages, etc. Tool Smiths are also proxy users for automation as their engagement is typically transitory while things are automated, then hands off after that.
+.well
+  %p Tool Smiths value:
+  %ul
+    %li Scriptable execution (Ant tasks, command line utilities, etc)
+    %li Descriptive error logging
+    %li Thorough documentation

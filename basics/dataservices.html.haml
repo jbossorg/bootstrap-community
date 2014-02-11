@@ -1,0 +1,84 @@
+---
+layout: rightcol
+title: Data Services
+---
+
+
+%h2 Data Services
+.clear
+  %br/
+.well A data service is a standards-based, uniform means of accessing information in a form useful to business applications.
+%p Since data is rarely in a form required by applications and services, and is often not even in a single data source, a key requirement for data services is that they abstract the data from its physical persistence structure, presenting it in a form that is closer to the needs of the using application. This effectively decouples consuming applications from the structure of the underlying data.
+%p Hand-in-hand with abstraction, a federated query engine is required to execute the transformations defining the abstraction layers in an efficient manner, and to expose the abstracted structures through uniform and standard APIs.
+%p The two key components of a data services architecture, then, are:
+.proj_basics
+  %ul.icons-ul
+    %li
+      %i.icon-li.icon-play-sign
+      %strong> Modeling environment
+      , to define the abstraction layers -- views and Web services
+    %li
+      %i.icon-li.icon-play-sign
+      %strong> Execution environment
+      , to actualize the abstract structures from the underlying data, and expose them through standard APIs.  A query engine is a required part of the execution environment, to optimally federate data from multiple disparate sources.
+.info_box
+  .box_content
+    %p
+      See
+      %a{href: "http://devcentral.metamatrix.com/blog/bobs/2006/04/07/SOAs-and-Data-Services"} SOAs and Data Services
+      for more information on the role data services play in an SOA.
+.clear
+  %br/
+%h3 Technical and Business Viewpoints
+%p Data services can be viewed from both a technology vantage point, or from a business viewpoint.
+%h4 The Technology Viewpoint
+%p
+  Teiid provides a suite of projects that provide
+  %em data services
+  to business applications.  That is, Teiid provides a means to access integrated data from multiple data sources, through your preferred standards-based API. Teiid provides access to  federated information through JDBC (SQL or XQuery), ODBC (SQL or XQuery), and SOAP (Web services).
+%h4 The Business Viewpoint
+%p
+  A more business- or user-centric view of data services is that they are information representations required by business applications. From this perspective, data services are defined and
+  %em designed
+  by business analysts, modelers, and developers to represent the information structures required by business applications. Often, a key design goal is one of interoperability - the requirement that systems work together seamlessly, including when exchanging data. Teiid provides graphical and other tools for defining these interoperable data services, essentially relational and XML views that can be used by business applications in a semantically-meaningful manner.
+%p
+  These two viewpoints roughly correspond to the
+  %strong Execution
+  and
+  %strong Modeling
+  components of a data services solution, respectively.
+.clear
+  %br/
+.uploaded-img
+  %img{alt: "", height: "514", src: "#{site.project_images_url}/teiid-dataservices.png", style: "margin:0 auto;", width: "557"}/
+%table
+  %tr
+    %td
+      %h3 Data Services - An Essential Part of an SOA
+      %p Data services are a key part of a service-oriented architecure, or SOA.  They provide the necessary interface to data for all business services.
+      .proj_basics
+        %ul.icons-ul
+          %li
+            %i.icon-li.icon-play-sign
+            Expose all data through a single uniform interface
+          %li
+            %i.icon-li.icon-play-sign
+            Provide a single point of access to all business services in the system
+          %li
+            %i.icon-li.icon-play-sign
+            Expose data using the same paradigm as business services - as "data services"
+          %li
+            %i.icon-li.icon-play-sign
+            Expose legacy data sources as data services
+          %li
+            %i.icon-li.icon-play-sign
+            Provide a uniform means of exposing/accessing metadata
+          %li
+            %i.icon-li.icon-play-sign
+            Provide a searchable interface to data and metadata
+          %li
+            %i.icon-li.icon-play-sign
+            Expose data relationships and semantics
+          %li
+            %i.icon-li.icon-play-sign
+            Provide uniform access controls to information
