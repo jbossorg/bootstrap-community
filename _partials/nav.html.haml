@@ -7,8 +7,21 @@
         %span.icon-bar
       .nav-collapse.collapse
         %ul.nav
-          %li{:class=>"#{'active' if page.output_path.start_with?('/index') }" }<
-            %a(href="#{site.base_url}/index.html") Home
+          %li.dropdown
+            %a.dropdown-toggle(href="#" data-toggle="dropdown")<
+              = precede 'Overview ' do
+                %b.caret>
+            %ul.dropdown-menu
+              %li<
+                %a(href="#{site.base_url}/about") About Teiid
+              %li<
+                %a(href="#{site.base_url}/basics") The Basics
+              %li<
+                %a(href="#{site.base_url}/quickstart") Quick Start
+              %li<
+                %a(href="#{site.base_url}/roadmap.html") Roadmap
+              %li<
+                %a(href="#{site.base_url}/tools.html") Tools
           %li{:class=>"#{'active' if page.output_path.start_with?('/downloads') }" }<
             %a(href="#{site.base_url}/downloads.html") Downloads
           %li{:class=>"#{'active' if page.output_path.start_with?('/docs') }" }<
