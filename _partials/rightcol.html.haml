@@ -1,3 +1,46 @@
+%table
+  %tbody
+    %tr
+      %td
+        %a{href: "http://www.jboss.com/products/platforms/dataservices/"}
+          %img{alt: "Looking for a fully supported, certified Data Services Platform?", height: "75", src: "#{site.project_images_url}/projectimage_projecttoproduct_dsp.png", style: "margin:0 auto;", width: "244"}/
+
+%br
+
+%a{:href => "http://www.jboss.org/teiiddesigner"}
+  %img{src: "#{site.project_images_url}/TeiidDesignerLogo_180x60.png"}
+
+%br
+
+.well
+  %dl
+    %dt tei·id  (TEE-id)
+    %br/
+    %dd
+      %b adj.
+         
+      %em pertaining to a family of tropical American whip-tailed lizards noted for speed and agility.
+    %dd
+      %b n.
+         
+      %em a set of open source enterprise information integration tools noted for their ability to rapidly create data services that can quickly adapt to changes in your IT environment.
+    %dd
+      %dl
+
+.span4
+  %section
+    %h4 Blog Posts
+    #blogDiv
+    :javascript
+      $(document).ready(function () {
+        $('#blogDiv').FeedEk({
+          FeedUrl: 'http://teiid.blogspot.com/feeds/posts/default',
+          MaxCount: 4,
+          ShowDesc: false,
+          CharacterLimit: 200
+        });
+      });
+
 .div
   %h2 Useful links
   %ul.nav.nav-list
@@ -35,13 +78,6 @@
   %a{href: "http://www.redhat.com/promo/integrated_enterprise/control/?sc_cid=701600000006UkyAAE "}
     %img{alt: "Control your business in real-time with automated decision making", height: "250", src: "#{site.project_images_url}/JB_Integration_Week_developers1_banner_250x250_10108197_1012_dc.png", style: "margin:0 auto;", width: "250"}/
 
-%table
-  %tbody
-    %tr
-      %td
-        %a{href: "http://www.jboss.com/products/platforms/dataservices/"}
-          %img{alt: "Looking for a fully supported, certified Data Services Platform?", height: "75", src: "#{site.project_images_url}/projectimage_projecttoproduct_dsp.png", style: "margin:0 auto;", width: "244"}/
-
 %br
 
 .well
@@ -55,7 +91,6 @@
       %li.arquillian
     %div{:style => "clear: both; height:1px;"}
 
-
 %div#coolstuff
   %p{:style => "margin-top: 2px; margin-bottom: 15px; margin-right: 10px; text-align: right;"}
     %a{:href => "http://www.jboss.org/coolstuff/desktopwallpapers/teiid.html"}> Desktop Wallpaper
@@ -63,29 +98,6 @@
     %a{:href => "http://www.cafepress.com/jbossorg/7028353"} Project Swag
   %a{:href => "http://www.jboss.org/coolstuff/desktopwallpapers/project"}
     %img{:alt => "Cool Stuff", :height => "110", :src => "#{site.project_images_url}/project_coolstuff_teiid.png", :style => "margin:0 auto;", :width => "225"}/
-
-.well
-  %i.icon-quote-left.icon-4x.pull-left
-  Teiid will become the basis for all future products, which will be our Enterprise Data Services Platform.
-  %br
-  %strong
-    %a{href: "http://andrigjboss.blogspot.com/2009/02/jboss-division-of-red-hat-gives-birth.html"} Andy Miller
-    11 Feb 09
-
-.well
-  %dl
-    %dt tei·id  (TEE-id)
-    %br/
-    %dd
-      %b adj.
-         
-      %em pertaining to a family of tropical American whip-tailed lizards noted for speed and agility.
-    %dd
-      %b n.
-         
-      %em a set of open source enterprise information integration tools noted for their ability to rapidly create data services that can quickly adapt to changes in your IT environment.
-    %dd
-      %dl
 
 %div
   %a{:href => "http://www.jboss.org/security.html"}/
