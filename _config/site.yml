@@ -69,7 +69,7 @@ profiles:
     jborg_images_url: http://static.jboss.org/theme/images
     jborg_js_url: http://static.jboss.org/theme/js
     project_images_url: http://static.jboss.org/teiid/images
-    bootstrap_css_url: /stylesheets-source/_bootstrap-community
+    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.4/bootstrap-community
     bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.4/bootstrap-community
     wget:
       enabled: false
