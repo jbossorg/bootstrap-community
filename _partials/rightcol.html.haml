@@ -11,6 +11,7 @@
   %img{src: "#{site.project_images_url}/TeiidDesignerLogo_180x60.png"}
 
 %br
+%br
 
 .well
   %dl
@@ -27,19 +28,18 @@
     %dd
       %dl
 
-.span4
-  %section
-    %h4 Blog Posts
-    #blogDiv
-    :javascript
-      $(document).ready(function () {
-        $('#blogDiv').FeedEk({
-          FeedUrl: 'http://teiid.blogspot.com/feeds/posts/default',
-          MaxCount: 4,
-          ShowDesc: false,
-          CharacterLimit: 200
-        });
+.well
+  %h4 Blog Posts
+  #blogDiv
+  :javascript
+    $(document).ready(function () {
+      $('#blogDiv').FeedEk({
+        FeedUrl: 'http://teiid.blogspot.com/feeds/posts/default',
+        MaxCount: 4,
+        ShowDesc: false,
+        CharacterLimit: 200
       });
+    });
 
 .div
   %h2 Useful links
