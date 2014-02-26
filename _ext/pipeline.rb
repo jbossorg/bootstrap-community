@@ -18,5 +18,6 @@ Awestruct::Extensions::Pipeline.new do
   extension Awestruct::Extensions::FileMerger.new
   extension Awestruct::Extensions::LessConfig.new
   extension Awestruct::Extensions::Symlinker.new
+  extension Awestruct::Extensions::Indexifier.new
 end
 

@@ -17,15 +17,15 @@
               %li<
                 %a(href="#{site.base_url}/basics") The Basics
               %li<
-                %a(href="#{site.base_url}/quickstart") Quick Start
+                %a(href="https://docs.jboss.org/author/display/teiidexamples/Home") Quick Start
               %li<
-                %a(href="#{site.base_url}/roadmap.html") Roadmap
+                %a(href="#{site.base_url}/roadmap") Roadmap
               %li<
-                %a(href="#{site.base_url}/tools.html") Tools
+                %a(href="#{site.base_url}/tools") Tools
           %li{:class=>"#{'active' if page.output_path.start_with?('/downloads') }" }<
-            %a(href="#{site.base_url}/downloads.html") Downloads
+            %a(href="#{site.base_url}/downloads") Downloads
           %li{:class=>"#{'active' if page.output_path.start_with?('/docs') }" }<
-            %a(href="#{site.base_url}/docs.html") Docs
+            %a(href="#{site.base_url}/docs") Docs
           %li.dropdown
             %a.dropdown-toggle(href="#" data-toggle="dropdown")<
               = precede 'Community ' do
@@ -38,9 +38,9 @@
               %li<
                 %a(href="https://community.jboss.org/en/teiid/dev") Developer Forum
               %li<
-                %a(href="#{site.base_url}/mailinglists.html") Mailing Lists
+                %a(href="#{site.base_url}/mailinglists") Mailing Lists
               %li<
-                %a(href="#{site.base_url}/chat.html") Chat
+                %a(href="#{site.base_url}/chat") Chat
               %li<
                 %a(href="http://teiid.blogspot.com/") Blog
           %li{:class=>"#{'active' if page.output_path.start_with?('/issues') }" }<
