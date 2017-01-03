@@ -50,15 +50,15 @@ wget:
     - -e robots=off
     - --directory-prefix=cache
   urls:
-    - http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js
-    - http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.min.js
-    - http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js
-    - http://static.jboss.org/theme/js/libs/prettify/188.0.0/prettify.min.js
-    - http://static.jboss.org/theme/js/libs/holder/1.9/holder.js
-    - http://static.jboss.org/theme/fonts/titilliumtext/
-    - http://static.jboss.org/theme/fonts/font-awesome/
-    - http://static.jboss.org/theme/images/common/
-    - http://static.jboss.org/example/
+    - https://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js
+    - https://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.min.js
+    - https://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js
+    - https://static.jboss.org/theme/js/libs/prettify/188.0.0/prettify.min.js
+    - https://static.jboss.org/theme/js/libs/holder/1.9/holder.js
+    - https://static.jboss.org/theme/fonts/titilliumtext/
+    - https://static.jboss.org/theme/fonts/font-awesome/
+    - https://static.jboss.org/theme/images/common/
+    - https://static.jboss.org/example/
 
 # Update resource URLs based on the profile
 profiles:
@@ -73,13 +73,13 @@ profiles:
       from: ../stylesheets
       to: ./_site/stylesheets-source
   staging:
-    jborg_fonts_url: http://static.jboss.org/theme/fonts
-    jborg_images_url: http://static.jboss.org/theme/images
-    jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
-    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/3.2.0.1/bootstrap-community
-    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.1/bootstrap-community
-    base_url: http://example-stg.jboss.org
+    jborg_fonts_url: https://static.jboss.org/theme/fonts
+    jborg_images_url: https://static.jboss.org/theme/images
+    jborg_js_url: https://static.jboss.org/theme/js
+    project_images_url: https://static.jboss.org/example/images
+    bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.2/bootstrap-community
+    bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.2/bootstrap-community
+    base_url: //example-stg.jboss.org
     wget:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
@@ -89,13 +89,13 @@ profiles:
     css_minifier: enabled
     js_minifier: enabled
     html_minifier: enabled
-    jborg_fonts_url: http://static.jboss.org/theme/fonts
-    jborg_images_url: http://static.jboss.org/theme/images
-    jborg_js_url: http://static.jboss.org/theme/js
-    project_images_url: http://static.jboss.org/example/images
-    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/3.2.0.1/bootstrap-community
-    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.1/bootstrap-community
-    base_url: http://example.jboss.org
+    jborg_fonts_url: https://static.jboss.org/theme/fonts
+    jborg_images_url: https://static.jboss.org/theme/images
+    jborg_js_url: https://static.jboss.org/theme/js
+    project_images_url: https://static.jboss.org/example/images
+    bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.2/bootstrap-community
+    bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.2/bootstrap-community
+    base_url: //example.jboss.org
     wget:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.

@@ -347,7 +347,7 @@ Tabzilla.content =
 +'  <p class="overview"> Like the project? It’s part of the community of Red Hat projects. Learn more about Red Hat and our open source communities:</p>'
 +'  <div class="row">'
 +'    <span class="col-md-4 middlewarelogo">'
-+'      <img src="http://static.jboss.org/common/images/tabzilla/RHJB_Middleware_Logotype.png" alt="Red Hat JBoss MIDDLEWARE" />'
++'      <img src="https://static.jboss.org/common/images/tabzilla/RHJB_Middleware_Logotype.png" alt="Red Hat JBoss MIDDLEWARE" />'
 +'    </span>'
 +'    <span class="col-md-4">'
 +'      <ul class="level1">'
@@ -586,7 +586,7 @@ function renderTabzilla( projectName , projectId, fullWidth ) {
     */
 
     // Getting HTML tab content from remote source.
-    var wrapper = $.ajax({url:"http://static.jboss.org/partials/tabcontent-bootstrap3.html",
+    var wrapper = $.ajax({url:"https://static.jboss.org/partials/tabcontent-bootstrap3.html",
       dataType:'html'
     });
 
