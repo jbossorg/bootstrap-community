@@ -62,7 +62,7 @@ function processJiraWidget(params) {
 			var rowData = dataArray[i];
 
 			rawTableBodyHtml += '<div class="issue '+rowType+'"><span class="jira-icon jira-issuetype-'+rowData.fields.issuetype.id+'">&nbsp;</span>';
-			rawTableBodyHtml += '<a href="http://jira.jboss.org/browse/'+rowData.key+'">'+rowData.key+':</a>&nbsp;';
+			rawTableBodyHtml += '<a href="https://issues.jboss.org/browse/'+rowData.key+'">'+rowData.key+':</a>&nbsp;';
 			rawTableBodyHtml += $('<div />').html(rowData.fields.summary).text();
 			rawTableBodyHtml += '<ul>';
 
@@ -180,7 +180,7 @@ function processJiraWidget(params) {
 
 		$.ajax({
 		  type : "POST",
-			url : "http://issues.jboss.org/rest/api/2/search",
+			url : "https://issues.jboss.org/rest/api/2/search",
 			dataType : 'jsonp',
 			data: query
 		});
