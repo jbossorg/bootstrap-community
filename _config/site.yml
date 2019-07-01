@@ -79,7 +79,7 @@ profiles:
     project_images_url: https://static.jboss.org/example/images
     bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.2/bootstrap-community
     bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.2/bootstrap-community
-    base_url: //example-stg.jboss.org
+    base_url: https://example-stg.jboss.org
     wget:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.
@@ -95,7 +95,7 @@ profiles:
     project_images_url: https://static.jboss.org/example/images
     bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.2/bootstrap-community
     bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.2/bootstrap-community
-    base_url: //example.jboss.org
+    base_url: https://example.jboss.org
     wget:
       enabled: false
     # Uncomment the line below and provide a valid Google Analytics ID to enable tracking of your site in this profile.

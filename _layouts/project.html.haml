@@ -41,12 +41,12 @@
       - if site.profile.eql?("staging") or site.profile.eql?("production")
         :plain
           <!-- begin eloqua tracking -->
-          <script type='text/javascript' language='JavaScript' src='//www.redhat.com/j/elqNow/elqCfg.js'></script>
-          <script type='text/javascript' language='JavaScript' src='//www.redhat.com/j/elqNow/elqImg.js'></script>
+          <script type='text/javascript' language='JavaScript' src='https://www.redhat.com/j/elqNow/elqCfg.js'></script>
+          <script type='text/javascript' language='JavaScript' src='https://www.redhat.com/j/elqNow/elqImg.js'></script>
           <!-- end eloqua tracking -->
 
           <div id="oTags">
-            <script type="text/javascript" src="//www.#{site.profile.eql?('staging') ? 'stage.' : ''}redhat.com/j/s_code.js"></script>
+            <script type="text/javascript" src="https://www.#{site.profile.eql?('staging') ? 'stage.' : ''}redhat.com/j/s_code.js"></script>
             <script type="text/javascript"><!--
             var coreUrl = encodeURI(document.URL.split("?")[0]).replace(/-/g," ");
             var urlSplit = coreUrl.toLowerCase().split(/\//);
@@ -78,11 +78,11 @@
             s.prop2 = s.eVar22 = "en";
             s.prop3 = s.eVar19 = "us";
             //--></script>
-            <script type="text/javascript" src="//www.#{site.profile.eql?('staging') ? 'stage.' : ''}redhat.com/j/rh_omni_footer.js"></script>
+            <script type="text/javascript" src="https://www.#{site.profile.eql?('staging') ? 'stage.' : ''}redhat.com/j/rh_omni_footer.js"></script>
             <script language="JavaScript" type="text/javascript"><!--
             if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
             //--></script>
-            <noscript><a href="http://www.omniture.com" title="Web Analytics"><img
+            <noscript><a href="https://www.omniture.com" title="Web Analytics"><img
             src="https://smtrcs.redhat.com/b/ss/redhatcom,redhatglobal/1/H.25.4--NS/0?[AQB]&cdp=3&[AQE]"
             height="1" width="1" border="0" alt="" /></a></noscript>
           </div>
