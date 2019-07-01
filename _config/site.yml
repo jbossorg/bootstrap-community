@@ -77,8 +77,8 @@ profiles:
     jborg_images_url: https://static.jboss.org/theme/images
     jborg_js_url: https://static.jboss.org/theme/js
     project_images_url: https://static.jboss.org/example/images
-    bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.2/bootstrap-community
-    bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.2/bootstrap-community
+    bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.3/bootstrap-community
+    bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.3/bootstrap-community
     base_url: https://example-stg.jboss.org
     wget:
       enabled: false
@@ -93,8 +93,8 @@ profiles:
     jborg_images_url: https://static.jboss.org/theme/images
     jborg_js_url: https://static.jboss.org/theme/js
     project_images_url: https://static.jboss.org/example/images
-    bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.2/bootstrap-community
-    bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.2/bootstrap-community
+    bootstrap_css_url: https://static.jboss.org/theme/css/bootstrap-community/3.2.0.3/bootstrap-community
+    bootstrap_js_url: https://static.jboss.org/theme/js/libs/bootstrap-community/3.2.0.3/bootstrap-community
     base_url: https://example.jboss.org
     wget:
       enabled: false
